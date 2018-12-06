@@ -16,4 +16,37 @@ Rapid Application Development means that, as a developer, you should get a lot o
 ## What does Rapido do for you?
 With Rapido, all you need to do is define the kind of documents that you want in a very easy way, and rapido will provide all of the UI that your users need to interact with those documents at run time. 
 
+### Just show me some code already
+In a nutshell, Rapido let's you define documents you care about in a simple way. Either by simply creating documents, or you can define labels for those documents in the UI. The latter way is handy if your app starts without any documents.
+
+In this code, we are creating a DocumentList, which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
+
+```
+  DocumentList documentList = DocumentList(
+    "Mapped Task List",
+    labels: {
+      "Task": "title",
+      "Note": "subtitle",
+      "Priority": "pri count",
+      "Date": "date"
+    },
+  );
+  ```
+
+  This is enough information for Rapido to create all of the UI that users need to manage those documents. The easiest way is to use a DocumentListScaffold, which will create all the UI all at once:
+
+  ```
+  @override
+  Widget build(BuildContext context) {
+    return DocumentListScaffold(
+      documentList,
+      title: "Tasks",
+      titleKeys: ["date", "title", "pri count"],
+      subtitleKey: "subtitle",
+    );
+  }
+  ```
+This code creates this full application:
+!(full app)[../assets/basic-ui.png]
+
 This will make a lot more sense if you look at the code, so head over to the [tutorial](get_started_part_1.md).
