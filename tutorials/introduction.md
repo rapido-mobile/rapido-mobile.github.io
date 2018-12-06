@@ -47,6 +47,6 @@ In this code, we are creating a DocumentList, which, you may guess, is a list of
   }
   ```
 This code creates this full application:
-![full app]()../assets/basic-ui.png)
+![full app](../assets/basic-ui.png)
 
 This will make a lot more sense if you look at the code, so head over to the [tutorial](get_started_part_1.md).
