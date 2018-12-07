@@ -11,7 +11,7 @@ Take, for example, an application that allows users to collaborate on listing go
 In code, each document is represented as a Map with each property having a string for the key, and some other data type for the value. This would be called a dictionary in Python, or an Object in Javascript.
 
 ## What is RAD?
-Rapid Application Development means that, as a developer, you should get a lot of functionality for not very much work. However, this should not come at the expense of power and flexibility. RAD means that you should only be spending your time as sa developer focused on the parts of your application that are unique.
+Rapid Application Development means that, as a developer, you should get a lot of functionality for not very much work. However, this should not come at the expense of power and flexibility. RAD means that you should only be spending your time as a developer focused on the parts of your application that are unique.
 
 ## What does Rapido do for you?
 With Rapido, all you need to do is define the kind of documents that you want in a very easy way, and rapido will provide all of the UI that your users need to interact with those documents at run time. 
