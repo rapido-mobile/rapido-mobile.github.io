@@ -3,7 +3,7 @@ This is part 2 of the getting started with Rapido tutorial. If you haven't looke
 
 ## Starting Point
 We've created an app called Tasker with Rapido. So we have a functional Task list application:  
-![starter app](clean-list.png)
+![starter app](../assets/clean-list.png)
 
 While functional, it could use some sprucing up. In this part of the tutorial we will add a background image, and add a prompt to display in case the DocumentListView is empty.
 
@@ -20,7 +20,7 @@ README.md	assets		ios		pubspec.lock	tasker.iml
 android		build		lib		pubspec.yaml	test
 ```
 Then, add your background image into that directory. I will use the following image because it was available with a free license, and I just like it for some reason:  
-![background](background.png)
+![background](../assets/background.png)
 
 I make sure it is in my assets directory:  
 ```
@@ -70,7 +70,7 @@ This code then adds the BoxDecoration:
 ![background](../assets/background-1.png)
 
 ### Add the Filter
-So, it worked, but of course the black image makes the app impossible to read and use. This can be worked around in multiple ways. For example, by editng the image directly. We will use a the powerful ColorFilter class to an almost opaque white overlay on top of the image:  
+So, it worked, but of course the black image makes the app impossible to read and use. This can be worked around in multiple ways. For example, by editng the image directly. We will use the powerful ColorFilter class to an almost opaque white overlay on top of the image:  
 ```
   @override
   Widget build(BuildContext context) {
@@ -88,7 +88,7 @@ So, it worked, but of course the black image makes the app impossible to read an
     );
   }
   ```
-This makes the application readable:  
+This makes the application readable while applying a bit of branding:  
 ![filtered background](../assets/background-2.png)
 
 ### Add the emptyListWidget
@@ -119,4 +119,6 @@ DocumentListView, and by extension DocumentListScaffold supports a property call
   ```
   Again, the emptyListWidget can be as complex and fancy as you like. In this case, we are keeping it simple:  
   ![list with prompt](../assets/list-with-prompt.png)
-  
+
+# Summary
+In this part of the tutorial we added a backgfound image to the DocumentListScaffold, and we added a widget to display when the DocumentListView was empty. In the [next part](get_started_part_3.md) we will replace the default ListTiles with our own cards.
