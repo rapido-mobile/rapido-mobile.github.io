@@ -1,5 +1,5 @@
 # Tutorial Overview
-Maybe you read the (introduction to Rapido)[introduction.md], or maybe you didn't. Either ways is fine, this is where we get to code.
+Maybe you read the [introduction to Rapido](introduction.md), or maybe you didn't. Either ways is fine, this is where we get to code.
 
 ## Pre Reqs
 This tutorial assumes that you know what Flutter is, and what Dart the programming language is, but it does not assume that you particularly familar with either. You should probably budget an hour to get the pre reqs set up. Once set up, you shouldn't have any issues.
@@ -294,7 +294,7 @@ The other fields are just assumed to be text:
 
 ### Fixing the Display
 After using the create functionality for 3 tasks, you can see that the list is being populated with the entries. You should also notice that the display is not ideal. We can easily fix that:  
-![buggy list](buggy-list.png)
+![buggy list](../assets/buggy-list.png)
 
 DocumentListScaffold and DocumentListView both allow a lot of customization, some of which will be covered later. For now, we will take advantage of some simple customization in the default ListTile that Rapido creates for each Document. The first property is called "titleKeys." This is a list of Strings which are the key names in the documents that you want in the document row.
 
@@ -309,7 +309,7 @@ So, change the build function to look like this:
   }
 ```
 This cleans up the UI a lot:  
-![cleaned up list](clean-list.png)
+![cleaned up list](../assets/clean-list.png)
 
 But, it's not displaying the notes field. We can use the subtitleKey property to tell Rapido to display the note in the subtitle of the default ListTile.
 ```
@@ -337,6 +337,8 @@ Which can sort on any field, such as priority:
 Finally, Rapido also automatically supplies add and delete functionality:  
 ![add/delete](../assets/add-delete.png)
 
+# Summary
+In this part of the tutorial, you saw how by defining some document structure and using DocumentListScaffold you can create the bones of an application in a few lines of code. [The next section](get_started_part_2.md) will cover how to improve the look and feel of your application.
 
 
 
