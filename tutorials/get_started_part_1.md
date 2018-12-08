@@ -255,10 +255,10 @@ So, let's update the code to use the DocumentListScaffold instead of building a 
 ```
 class _TaskerHomePageState extends State<TaskerHomePage> {
   DocumentList documentList = DocumentList("Tasker", labels: {
-    "Task" : "title",
-    "Date" : "date",
-    "Priority" : "pri count",
-    "Note" : "note"
+    "Date": "date",
+    "Task": "title",
+    "Priority": "pri count",
+    "Note": "subtitle"
   });
 
   @override
@@ -294,38 +294,8 @@ Because you named the field for priority in something that ends in "count", Rapi
 The other fields are just assumed to be text:  
 ![complete form](../assets/complete-form.png)
 
-### Fixing the Display
-After using the create functionality for 3 tasks, you can see that the list is being populated with the entries. You should also notice that the display is not ideal. We can easily fix that:  
-![buggy list](../assets/buggy-list.png)
-
-DocumentListScaffold and DocumentListView both allow a lot of customization, some of which will be covered later. For now, we will take advantage of some simple customization in the default ListTile that Rapido creates for each Document. The first property is called "titleKeys." This is a list of Strings which are the key names in the documents that you want in the document row.
-
-So, change the build function to look like this:
-```
-  @override
-  Widget build(BuildContext context) {
-    return DocumentListScaffold(
-      documentList,
-      titleKeys: ["date", "title", "pri count"],
-    );
-  }
-```
-This cleans up the UI a lot:  
-![cleaned up list](../assets/clean-list.png)
-
-But, it's not displaying the notes field. We can use the subtitleKey property to tell Rapido to display the note in the subtitle of the default ListTile.
-```
-  @override
-  Widget build(BuildContext context) {
-    return DocumentListScaffold(
-      documentList,
-      titleKeys: ["date", "title", "pri count"],
-      subtitleKey: "note",
-    );
-  }
-  ```
-
-And that displays the notes:  
+### Default ListTile
+The fields "title" and "subtitle" have semantic meaning to Rapido, which means that different UI elements will infer your intentions from how you name the fields. For example, you can see that the default ListTile assumes that you want to use what you call "Notes" in the UI as a subtitle:  
 ![subtitle](../assets/subtitle.png)
 
 ### Sorting
