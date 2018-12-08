@@ -90,7 +90,7 @@ Now when the button is pressed, it displays a map with the Documents:
 ![map with docs](../assets/map-with-docs.png)
 
 It also shows the titles if you click on pins:  
-![map with title](../assets/map-with-titles.png)
+![map with title](../assets/map-with-title.png)
 
 This works because of the semantic meaning of "title" in the Document's fields.
 
