@@ -44,14 +44,61 @@ Of course, we need to set the customItemBuilder proprty to use it:
     return Text(doc["title"]);
   }
   ```
+Notice that the customItemBuilder passes in a Document object. As discussed in [the introduction](introduction.md), a Document is Map of Strings to dynamics, along with some other functionality. As you can see in the code above, you can access the fields in the Document as easily as accessing the fields in a Map.
+
 It's working, but, of course, much worse than the default:  
 ![custom builder](../assets/custom-builder-1.png)
 
-
 ## Build a Card
+You can return any widget that you want from customItemBuilder. For this tutorial, we'll a Card for each item. And we'll put a column in each Card. Then we will use Text widgets to display the title, date, and notes.
+
+```
+  Widget customItemBuilder(int index, Document doc, BuildContext context) {
+    return Card(
+      child: Column(
+        children: <Widget>[
+          Text(doc["title"]),
+          Text(doc["date"]),
+          Text(doc["note"])
+        ],
+      ),
+    );
+  }
+  ```
+This cleans it up quite a bit:  
+![custom cards](../assets/custom-builder-2.png)
+
+We can use the applications text them to enhance the display some:  
+```
+  Widget customItemBuilder(int index, Document doc, BuildContext context) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+
+    return Card(
+      child: Column(
+        children: <Widget>[
+          Text(
+            doc["title"],
+            style: textTheme.display1,
+          ),
+          Text(
+            doc["date"],
+            style: textTheme.headline,
+          ),
+          Text(
+            doc["note"],
+            style: textTheme.subhead,
+          )
+        ],
+      ),
+    );
+  }
+```
+This results in a slightly more nicely styled Card:  
+![styled cards](../assets/custom-builder-3.png)
+
 
 ## Set the Color Dynamically
 
-## Reuse DocumentActionsButton
+## Use DocumentActionsButton
 
 # Summary
