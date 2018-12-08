@@ -1,5 +1,5 @@
 # Tutorial Overview
-This is part 2 of the getting started with Rapido tutorial. If you haven't looked through [part 1](get_started_part_1.md) you might want to at least go back and skim those this part makes sense.
+This is part 2 of the getting started with Rapido tutorial. If you haven't looked through [part 1](get_started_part_1.md) you might want to at least go back and skim that so this part makes sense.
 
 ## Starting Point
 We've created an app called Tasker with Rapido. So we have a functional Task list application:  
