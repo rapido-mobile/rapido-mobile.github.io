@@ -35,5 +35,66 @@ And if we click on that button, it brings up a picker with a map. The user can m
 And you can see that the location is added to the form:  
 ![form with complete location](../assets/form-with-complete-location.png)
 
+After adding a location to each item, though, the user can't see the location yet:  
+![custom builder](../assets/custom-builder-6.png)
+
 ## Add the Map to the App
+There are different ways we can give the user access to a map. To make this really easy, Rapido comes with a DocumentListMapView that will display all of the Documents in a DocumentList on a map, assuming that those Documents include a map_point field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
+
+We will use the additionalActions property of the DocumentListScaffold to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
+
+The additionalActions property is a list of Widgets to display in the title bar. We only need to create one, which will be an IconButton:  
+```
+        IconButton(icon: Icon(Icons.map), onPressed: () {})
+```
+So the whole build function looks like this:  
+```
+  @override
+  Widget build(BuildContext context) {
+    return DocumentListScaffold(
+      documentList,
+      additionalActions: <Widget>[
+        IconButton(icon: Icon(Icons.map), onPressed: () {})
+      ],
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/background.jpg"),
+          colorFilter: ColorFilter.mode(
+              Colors.white.withOpacity(0.05), BlendMode.dstATop),
+        ),
+      ),
+      emptyListWidget: Center(
+        child: Text("Click the add button to create your first task"),
+      ),
+      customItemBuilder: customItemBuilder,
+    );
+  }
+```
+And this added the map button:  
+![map button](../assets/map-button.png)
+
+Of course, onPressed is empty so the button doesn't do anything. First, we can create a function that will push a new MaterialPageRoute with a DocumentListMapView.
+```
+void navigateToMap() {
+Navigator.push(
+    context, MaterialPageRoute(builder: (BuildContext context) {
+        return DocumentListMapView(documentList);
+    }));
+}
+```
+Then we change the onPressed event for the button to call that function instead:
+```
+    IconButton(icon: Icon(Icons.map), onPressed: navigateToMap),
+```
+Now when the button is pressed, it displays a map with the Documents:  
+![map with docs](map-with-docs.png)
+
+It also shows the titles if you click on pins:  
+![map with title](map-with-titles.png)
+
+This works because of the semantic meaning of "title" in the Document's fields.
+
+# Summary
+This section showed how to add maps and location to your application. It showed, on the way, how to use the additionalActions property of the DocumentListScaffold to add functionality to your application.
+
 
