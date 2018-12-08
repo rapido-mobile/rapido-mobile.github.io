@@ -273,30 +273,59 @@ Now our code is much simpler, but, now there is much more functionality provided
 
 ### Creation UI
 #### Floating Action Button
-The DocumentListScaffold creates a DocumentListView, along with a FloatingActionButton for creating documents. 
+The DocumentListScaffold creates a DocumentListView, along with a FloatingActionButton for creating documents.  
 ![empty list](../assets/empty-list.png)
 
 #### Create Form
-The DocumentListView is empty because the DocumentList is empty. But, the user can simply click the add button.
+The DocumentListView is empty because the DocumentList is empty. But, the user can simply click the add button.  
 ![create form](../assets/create.png)
 
 #### Date Picker
-Because you named the field for the date in something that ends in "date," Rapido guesses that you want the user to enter a date for this field, and so creates a date picker automatically.
+Because you named the field for the date in something that ends in "date," Rapido guesses that you want the user to enter a date for this field, and so creates a date picker automatically.  
 ![date field](../assets/date.png)
 
 #### Integer Picker
-Because you named the field for priority in something that ends in "count", Rapido guesses that the user will enter an integer:
+Because you named the field for priority in something that ends in "count", Rapido guesses that the user will enter an integer:  
 ![integer field](../assets/int.png)
 
 #### Completed Form
-The other fields are just assumed to be text:
+The other fields are just assumed to be text:  
 ![complete form](../assets/complete-form.png)
 
 #### Fixing the Display
-After using the create functionality for 3 tasks, you can see that the list is being populated with the entries. You should also notice that the display is not ideal. We can easily fix that.
+After using the create functionality for 3 tasks, you can see that the list is being populated with the entries. You should also notice that the display is not ideal. We can easily fix that.  
 ![buggy list](buggy-list.png)
 
-DocumentListScaffold and DocumentListView both allow a lot of customization, some of which will be covered later. The easiest
+DocumentListScaffold and DocumentListView both allow a lot of customization, some of which will be covered later. For now, we will take advantage of some simple customization in the default ListTile that Rapido creates for each Document. The first property is called "titleKeys." This is a list of Strings which are the key names in the documents that you want in the document row.
+
+So, change the build function to look like this:
+```
+  @override
+  Widget build(BuildContext context) {
+    return DocumentListScaffold(
+      documentList,
+      titleKeys: ["date", "title", "pri count"],
+    );
+  }
+```
+This cleans up the UI a lot:  
+![cleaned up list](clean-list.png)
+
+But, it's not displaying the notes field. We can use the subtitleKey property to tell Rapido to display the note in the subtitle of the default ListTile.
+```
+  @override
+  Widget build(BuildContext context) {
+    return DocumentListScaffold(
+      documentList,
+      titleKeys: ["date", "title", "pri count"],
+      subtitleKey: "note",
+    );
+  }
+  ```
+
+And that displays the notes.  
+![subtitle](subtitle.png)
+
 
 ### Sorting
 
