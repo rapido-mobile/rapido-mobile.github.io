@@ -4,13 +4,13 @@ Maybe you read the (introduction to Rapido)[introduction.md], or maybe you didn'
 ## Pre Reqs
 This tutorial assumes that you know what Flutter is, and what Dart the programming language is, but it does not assume that you particularly familar with either. You should probably budget an hour to get the pre reqs set up. Once set up, you shouldn't have any issues.
 
-If you have Flutter running, skip to [creating the project](##create-the-project).
+If you have Flutter running, skip to [creating the project](#create-the-project).
 
 ### Flutter Itself
 Obviously yuou will need to have Flutter installed. Head over to the [install page](https://flutter.io/docs/get-started/install) and follow directions for your opertaing system. 
 
 ### An IDE
-While you have a choice of IDEs, I strongly prefer Visual [Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) with the Dart and Flutter extensions installed. Though it is useful to have Android Studio installed for setting up emulators.
+While you have a choice of IDEs, I strongly prefer [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) with the Dart and Flutter extensions installed. Though it is useful to have Android Studio installed for setting up emulators.
 
 ### Emulators
 Emulators are used for the the run/debug cycle. It is much easier to test your code while you are developing. If you followed the instructions for installing Flutter, than you probably already set up an emulator.
@@ -203,9 +203,107 @@ This means that we are going to use the documents capabilities from the rapido p
 If your IDE says that it can't find the package, than most likely you have not run packages get, or you have problems with indenting in your YAML.
 
 ## Define a DocumentList
-Now it is finally time to write some code by creating a DocumentList. 
+Now it is finally time to write some code by creating a DocumentList. A DocumentList is an extension of the base List in the Dart language, but it is specialized to only be a list of Documents. This means that any operation that you can do on a normal List in Dart, you can do on a DocumentList as well. However, DocumentList has some extra abilities that are specific to Rapido. You can see the [API documentation](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) for details, or just plow ahead and see how the code works.
+
+Defining a DocumentList is easy. All you need to do is provide a String as a "documentType". This is simply an identifier that Rapido uses to organize Documents together in the DocumentList. So, you could create a DocumentList like this:
+
+```
+  DocumentList documentList DocumentList("Tasker");
+```
+Then you can start adding Documents to it in code, like this:
+
+```
+  documentList.add(Document());
+```
+
+This is of limited utility, because you haven't actually added any data. In fact, for this app, we won't be creating Documents directly, but rather we will let Rapido create all of the UI for end users to manage the Documents themselves. 
+
+To do that, we will give the DocumentList a little bit more information. We will tell it what sort of fields to expect in the Documents, but, more importantly, how to show those fields in the UI. We do this by adding a "labels" property to the DocumentList. This is a map where the keys are the labels to show in the user interface, and the values are the keys in the documents. The names of the keys in the documents are important, as you will see soon.
+
+So, let's create a labels property for the DocumentList, and add it to our code for the _TaskerHomePageState:
+
+```
+class _TaskerHomePageState extends State<TaskerHomePage> {
+  DocumentList documentList = DocumentList("Tasker", labels: {
+    "Task" : "title",
+    "Date" : "date",
+    "Priority" : "pri count",
+    "Note" : "note"
+  });
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Tasker"),
+      ),
+      body: Container(),
+    );
+  }
+}
+```
+This says that we are creating a DocumentList, and that the UI should show that there is a Task name, a date, a prioriity field, and a not field. Keep your eye on "date" and "pri count" because you will see how naming the fields in that way is particularly useful.
+
+At this point, if you run that application, there is no change, because we have not created a UI.
 
 ## Create the UI
+Rapido has a suite of UI components that work with Documents and DocumentLists. The fastest one to use to get your app up and running is called "DocumentListScaffold." This creates all of the UI that you need to the user to manage the data in the app.
+
+So, let's update the code to use the DocumentListScaffold instead of building a Scaffold:
+
+```
+class _TaskerHomePageState extends State<TaskerHomePage> {
+  DocumentList documentList = DocumentList("Tasker", labels: {
+    "Task" : "title",
+    "Date" : "date",
+    "Priority" : "pri count",
+    "Note" : "note"
+  });
+
+  @override
+  Widget build(BuildContext context) {
+
+    return DocumentListScaffold(documentList);
+  }
+}
+```
+
+Now our code is much simpler, but, now there is much more functionality provided.
+
+### Creation UI
+#### Floating Action Button
+The DocumentListScaffold creates a DocumentListView, along with a FloatingActionButton for creating documents. 
+![empty list](../assets/empty-list.png)
+
+#### Create Form
+The DocumentListView is empty because the DocumentList is empty. But, the user can simply click the add button.
+![create form](../assets/create.png)
+
+#### Date Picker
+Because you named the field for the date in something that ends in "date," Rapido guesses that you want the user to enter a date for this field, and so creates a date picker automatically.
+![date field](../assets/date.png)
+
+#### Integer Picker
+Because you named the field for priority in something that ends in "count", Rapido guesses that the user will enter an integer:
+![integer field](../assets/int.png)
+
+#### Completed Form
+The other fields are just assumed to be text:
+![complete form](../assets/complete-form.png)
+
+#### Fixing the Display
+After using the create functionality for 3 tasks, you can see that the list is being populated with the entries. You should also notice that the display is not ideal. We can easily fix that.
+![buggy list](buggy-list.png)
+
+DocumentListScaffold and DocumentListView both allow a lot of customization, some of which will be covered later. The easiest
+
+### Sorting
+
+
+### Add and Delete
+
+
 
 
 
