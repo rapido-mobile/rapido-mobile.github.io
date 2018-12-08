@@ -272,6 +272,8 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
 Now our code is much simpler, but, now there is much more functionality provided.
 
 ### Creation UI
+In the sections below, note how the UI displays the keys from the labels property in the DocumentListView automatically.
+
 #### Floating Action Button
 The DocumentListScaffold creates a DocumentListView, along with a FloatingActionButton for creating documents:  
 ![empty list](../assets/empty-list.png)

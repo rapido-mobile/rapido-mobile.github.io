@@ -96,9 +96,65 @@ We can use the applications text them to enhance the display some:
 This results in a slightly more nicely styled Card:  
 ![styled cards](../assets/custom-builder-3.png)
 
+## Set the Card Color Dynamically
+Notice that we are not displaying the pri count field at all. We can use the customItemBuilder function to set the color of the Card, based on the priority in the Document. We could do many other things, like choose an icon based on the priority, etc... But we will stick with just setting the color.
 
-## Set the Color Dynamically
+First, let's implement a simple function to return colors based on the priority of the tasks:
+```
+  Color getCardColor(Document doc) {
+    int priority = doc["pri count"];
+    if (priority < 3) return Colors.red;
+    if (priority < 6) return Colors.yellow;
+    return Colors.green;
+  }
+  ```
+  Then when we create the Card, we just use this function to set the color:  
+  ```
+    return Card(
+      color: getCardColor(doc),
+    ...
+  ```
+Now the Card color gets set based on the priority:  
+![colors](../assets/custom-builder-4.png)
 
 ## Use DocumentActionsButton
+One important thing to note at this point, is that the UI that we have not replaced (the AddDocumentFloatingActionButto, and the DocumentListSortButton) still work perfectly.
+
+However, when we replaced the default ListTile, we lost the DocumentActionsButton which allows the user to edit or delete a task. We could add our own custom UI for this, and use the functions in Document and DocumentList. However, all of the different UI elements in Rapido are designed so you can mix and match them with your own widgets. 
+
+So, let's just add a DocumentActionsButton to each Card. To do this, we just have to tell the DocumentActionsButton widget two things, the DocumentList to act on, and the index of the Document in that DocumentList. The index is passed into the customItemBuilder function, so we can just pass it along.
+```
+         DocumentActionsButton(documentList, index: index)
+```
+The full function now looks like this:
+```
+  Widget customItemBuilder(int index, Document doc, BuildContext context) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+
+    return Card(
+      color: getCardColor(doc),
+      child: Column(
+        children: <Widget>[
+          Text(
+            doc["title"],
+            style: textTheme.display1,
+          ),
+          Text(
+            doc["date"],
+            style: textTheme.headline,
+          ),
+          Text(
+            doc["note"],
+            style: textTheme.subhead,
+          ),
+          DocumentActionsButton(documentList, index: index)
+        ],
+      ),
+    );
+  }
+```
+And it "just works":  
+![with actions](../assets/custom-builder-5.png)
 
 # Summary
+In this section, we dove into how to create custom widgets. In the [next section](get_started_part_4.md), we will show how to include location and mapping functionality.
