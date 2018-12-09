@@ -1,10 +1,10 @@
 # Introduction to Rapido
 ## TOC
  * Introduction to Rapido
- * [1: Make a complte app with a few lines of code](./tutorials/get_started_part_1.md)
- * [2: Brand and light customization](./tutorials/get_started_part_2.md)
- * [3: Providing your own widgets](./tutorials/get_started_part_3.md)
- * [4: Adding maps and location](./tutorials/get_started_part_4.md)
+ * [1: Make a complte app with a few lines of code](./get_started_part_1.md)
+ * [2: Brand and light customization](./get_started_part_2.md)
+ * [3: Providing your own widgets](./get_started_part_3.md)
+ * [4: Adding maps and location](./get_started_part_4.md)
 
 # Introduction to Rapido
 Rapido is an open source libraruy that intends to make cross platform development easy and fun. We do this by taking a document-centric approach to development, and by following Rapid Application Development (RAD) principles whenever possible.
