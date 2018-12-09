@@ -39,7 +39,7 @@ background.jpg
 The flutter tools don't particularly care what is in that assets directory at this point. You have to tell flutter to actually use the image by adding a refernece to it in your pubspec.yaml file. 
 
 This can be tricky because YAML can play tricks on you. The Flutter developers try to help you out by highlighting where to add the reference in pubspec.yaml:  
-```
+```yaml
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
@@ -47,7 +47,7 @@ This can be tricky because YAML can play tricks on you. The Flutter developers t
 ```
 
 So I change it to look like this:  
-```
+```yaml
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/background.jpg
@@ -59,7 +59,7 @@ It's very important that "assets" is indendeted 2 spaces, and the
 [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) lets you pass in BoxDecoration, and will display that as part of the Scaffold. We will use this to display our backgound.jpg image. BoxDecoration is a very powerful feature in Flutter for decorating Containers. You can use it to add background colors, borders, background images, etc... As a result, it can be slightly complicated to use. 
 
 We want to add a background image, so will use a DecorationImage to display an image in the BoxDecoration, and then use an AssetImage to load a local asset into the DecorationImage. So, the build code should like this:  
-```
+```dart
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(
@@ -79,7 +79,7 @@ This code then adds the BoxDecoration:
 
 ### Add the Filter
 So, it worked, but of course the black image makes the app impossible to read and use. This can be worked around in multiple ways. For example, by editng the image directly. We will use the powerful ColorFilter class to an almost opaque white overlay on top of the image:  
-```
+```dart
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(
@@ -105,7 +105,7 @@ When the list is empty, the app is a little boring, even if the background is vi
 
 [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html), and by extension [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) supports a property called "emptyListWidget." This widget will display whenever the list is empty. You can pass in any widget you like. For our purposes, we will add some centered text.
 
-```
+```dart
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(

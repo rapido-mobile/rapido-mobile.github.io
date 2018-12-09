@@ -22,7 +22,7 @@ See the (Google Maps Flutter Plugin)[https://pub.dartlang.org/packages/google_ma
 
 ## Adding a Map Point Field
 In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "map-point" field to each Document:
-```
+```dart
   DocumentList documentList = DocumentList("Tasker", labels: {
     "Task": "title",
     "Date": "date",
@@ -52,11 +52,11 @@ There are different ways we can give the user access to a map. To make this real
 We will use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
 
 The additionalActions property is a list of Widgets to display in the title bar. We only need to create one, which will be an IconButton:  
-```
+```dart
         IconButton(icon: Icon(Icons.map), onPressed: () {})
 ```
 So the whole build function looks like this:  
-```
+```dart
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(
@@ -82,7 +82,7 @@ And this added the map button:
 ![map button](../assets/map-button.png)
 
 Of course, onPressed is empty so the button doesn't do anything. First, we can create a function that will push a new MaterialPageRoute with a DocumentListMapView.
-```
+```dart
 void navigateToMap() {
 Navigator.push(
     context, MaterialPageRoute(builder: (BuildContext context) {
@@ -91,7 +91,7 @@ Navigator.push(
 }
 ```
 Then we change the onPressed event for the button to call that function instead:
-```
+```dart
     IconButton(icon: Icon(Icons.map), onPressed: navigateToMap),
 ```
 Now when the button is pressed, it displays a map with the Documents:  

@@ -124,7 +124,7 @@ As the output stated, the application code is in the lib directory in the main.d
 
 The first thing I do is edit the application code to dramatically simplify it so it is easier to understand and modify. I also rename the class names while I am at it:
 
-```
+```dart
 import 'package:flutter/material.dart';
 
 void main() => runApp(Tasker());
@@ -180,7 +180,7 @@ Next step is to import rapido into your project. It is probably wise to visit ra
 
 To get a flutter package into your project, you add it to your pubspec.yaml file as a dependency. Be careful with your YAML, it cares a lot about proper indentation. Add a reference to rapido so that your pubspec.yaml looks like this:
 
-```
+```yaml
 dependencies:
   flutter:
     sdk: flutter
@@ -202,7 +202,7 @@ To actually use Rapido in your code, you need to import it into you main.dart fi
 
 Add this import to the top of that file right under the existing import:
 
-```
+```dart
 import 'package:rapido/documents.dart';
 ```
 
@@ -215,12 +215,12 @@ Now it is finally time to write some code by creating a [DocumentList](https://p
 
 Defining a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is easy. All you need to do is provide a String as a "documentType". This is simply an identifier that Rapido uses to organize Documents together in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). So, you could create a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) like this:
 
-```
+```dart
   DocumentList documentList DocumentList("Tasker");
 ```
 Then you can start adding Documents to it in code, like this:
 
-```
+```dart
   documentList.add(Document());
 ```
 
@@ -230,7 +230,7 @@ To do that, we will give the [DocumentList](https://pub.dartlang.org/documentati
 
 So, let's create a labels property for the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), and add it to our code for the _TaskerHomePageState:
 
-```
+```dart
 class _TaskerHomePageState extends State<TaskerHomePage> {
   DocumentList documentList = DocumentList("Tasker", labels: {
     "Date": "date",
@@ -260,7 +260,7 @@ Rapido has a suite of UI components that work with Documents and DocumentLists. 
 
 So, let's update the code to use the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) instead of building a Scaffold:
 
-```
+```dart
 class _TaskerHomePageState extends State<TaskerHomePage> {
   DocumentList documentList = DocumentList("Tasker", labels: {
     "Date": "date",

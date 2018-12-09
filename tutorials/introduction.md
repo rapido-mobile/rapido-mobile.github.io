@@ -30,7 +30,7 @@ In a nutshell, Rapido let's you define documents you care about in a simple way.
 
 In this code, we are creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
 
-```
+```dart
   DocumentList documentList = DocumentList(
     "Mapped Task List",
     labels: {
@@ -44,7 +44,7 @@ In this code, we are creating a [DocumentList](https://pub.dartlang.org/document
 
   This is enough information for Rapido to create all of the UI that users need to manage those documents. The easiest way is to use a [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), which will create all the UI all at once:
 
-  ```
+  ```dart
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(
