@@ -1,4 +1,5 @@
-# Tutorial Overview
+# Create a Full App in a Few Lines of Code
+## TOC
  * [Introduction to Rapido](./introduction.md)
  * 1: Make a complte app with a few lines of code
  * [2: Brand and light customization](./get_started_part_2.md)

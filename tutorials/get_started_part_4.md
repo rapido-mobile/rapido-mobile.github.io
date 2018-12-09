@@ -1,4 +1,5 @@
-# Tutorial Overview
+# Add Maps and Location
+## TOC
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complte app with a few lines of code](./get_started_part_1.md)
  * [2: Brand and light customization](./get_started_part_2.md)
