@@ -1,5 +1,11 @@
 # Tutorial Overview
-Maybe you read the [introduction to Rapido](introduction.md), or maybe you didn't. Either ways is fine, this is where we get to code.
+ * [Introduction to Rapido](./tutorials/introduction.md)
+ * 1: Make a complte app with a few lines of code
+ * [2: Brand and light customization](./tutorials/get_started_part_2.md)
+ * [3: Providing your own widgets](./tutorials/get_started_part_3.md)
+ * [4: Adding maps and location](./tutorials/get_started_part_4.md)
+
+Maybe you read the [introduction to Rapido](introduction.md), or maybe you didn't. Either ways is fine, in this part we start coding.
 
 ## Pre Reqs
 This tutorial assumes that you know what Flutter is, and what Dart the programming language is, but it does not assume that you particularly familar with either. You should probably budget an hour to get the pre reqs set up. Once set up, you shouldn't have any issues.

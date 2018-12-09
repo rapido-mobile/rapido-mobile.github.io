@@ -1,5 +1,11 @@
 # Tutorial Overview
-This is part 4 of the getting started with Rapido tutorial. If you haven't looked through [part 1](get_started_part_1.md), [part 2](get_started_part_2.md), or [part 3](get_started_part_3.md) you might want to at least go back and skim those so this part makes sense.
+ * [Introduction to Rapido](./tutorials/introduction.md)
+ * [1: Make a complte app with a few lines of code](./tutorials/get_started_part_1.md)
+ * [2: Brand and light customization](./tutorials/get_started_part_2.md)
+ * [3: Providing your own widgets](./tutorials/get_started_part_3.md)
+ * 4: Adding maps and location](./tutorials/get_started_part_4.md
+
+This is part 4 of the getting started with Rapido tutorial. If you haven't looked through the previous parts, you might want to at least go back and skim those so this part makes sense.
 
 In this section we will add a map location to each task, and display a map with each entry.
 
