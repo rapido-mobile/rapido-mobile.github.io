@@ -122,7 +122,7 @@ Your application code is in tasker/lib/main.dart.
 ### Edit the Generated Code to Create a Blank App
 As the output stated, the application code is in the lib directory in the main.dart file. Flutter creates a demo app with tons of comments. If you are like me, you may find this initial outout overwhelming and confusing. 
 
-The first thing I do is edit the application code to dramatically simplify it so it is easier to understand and modify. I also rename the class names while I am at it:
+The first thing I do is edit the application code to dramatically simplify it so it is easier to understand and modify. I also rename the class names while I am at it. Replace lib/main.dart with the code below:
 
 ```dart
 import 'package:flutter/material.dart';
