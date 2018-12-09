@@ -34,10 +34,10 @@ In this code, we are creating a [DocumentList](https://pub.dartlang.org/document
   DocumentList documentList = DocumentList(
     "Mapped Task List",
     labels: {
-      "Task": "title",
-      "Note": "subtitle",
-      "Priority": "pri count",
-      "Date": "date"
+    "Date": "date",
+    "Task": "title",
+    "Priority": "pri count",
+    "Note": "subtitle"
     },
   );
   ```
@@ -48,10 +48,7 @@ In this code, we are creating a [DocumentList](https://pub.dartlang.org/document
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(
-      documentList,
-      title: "Tasks",
-      titleKeys: ["date", "title", "pri count"],
-      subtitleKey: "subtitle",
+      documentList
     );
   }
   ```
