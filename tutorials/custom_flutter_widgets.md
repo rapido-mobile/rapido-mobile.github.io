@@ -1,12 +1,12 @@
 # Supply Your Own Widgets
 ## TOC
  * [Introduction to Rapido](./introduction.md)
- * [1: Make a complte app with a few lines of code](./get_started_part_1.md)
- * [2: Brand and light customization](./get_started_part_2.md)
- * 3: Providing your own widgets](./get_started_part_3.md
- * [4: Adding maps and location](./get_started_part_4.md)
+ * [1: Make a complte app with a few lines of code](./flutter_app_in_few_lines.md)
+ * [2: Brand and light customization](./customize_flutter_app.md)
+ * 3: Providing your own widgets](./custom_flutter_widgets.md
+ * [4: Adding maps and location](./flutter_maps_and_location.md)
 
-This is part 3 of the getting started with Rapido tutorial. If you haven't looked through [part 1](get_started_part_1.md) and [part 2](get_started_part_2.md) you might want to at least go back and skim those so this part makes sense.
+This is part 3 of the getting started with Rapido tutorial. If you haven't looked through [part 1](flutter_app_in_few_lines.md) and [part 2](customize_flutter_app.md) you might want to at least go back and skim those so this part makes sense.
 
 ## Starting Point
 At this point, we have a functioning application, and we have applied some branding:  
@@ -164,4 +164,4 @@ And it "just works":
 ![with actions](../assets/custom-builder-5.png)
 
 # Summary
-In this section, we dove into how to create custom widgets. In the [next section](get_started_part_4.md), we will show how to include location and mapping functionality.
+In this section, we dove into how to create custom widgets. In the [next section](flutter_maps_and_location.md), we will show how to include location and mapping functionality.

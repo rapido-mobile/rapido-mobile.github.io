@@ -1,12 +1,12 @@
 # Customize Your Look and Feel
 ## TOC
  * [Introduction to Rapido](./introduction.md)
- * [1: Make a complte app with a few lines of code](./get_started_part_1.md)
- * 2: Brand and light customization](./get_started_part_2.md
- * [3: Providing your own widgets](./get_started_part_3.md)
- * [4: Adding maps and location](./get_started_part_4.md)
+ * [1: Make a complte app with a few lines of code](./flutter_app_in_few_lines.md)
+ * 2: Brand and light customization](./customize_flutter_app.md
+ * [3: Providing your own widgets](./custom_flutter_widgets.md)
+ * [4: Adding maps and location](./flutter_maps_and_location.md)
 
-This is part 2 of the getting started with Rapido tutorial. If you haven't looked through [part 1](get_started_part_1.md) you might want to at least go back and skim that so this part makes sense.
+This is part 2 of the getting started with Rapido tutorial. If you haven't looked through [part 1](flutter_app_in_few_lines.md) you might want to at least go back and skim that so this part makes sense.
 
 ## Starting Point
 We've created an app called Tasker with Rapido. So we have a functional Task list application:  
@@ -128,4 +128,4 @@ When the list is empty, the app is a little boring, even if the background is vi
   ![list with prompt](../assets/list-with-prompt.png)
 
 # Summary
-In this part of the tutorial we added a backgfound image to the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), and we added a widget to display when the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) was empty. In the [next part](get_started_part_3.md) we will replace the default ListTiles with our own cards.
+In this part of the tutorial we added a backgfound image to the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), and we added a widget to display when the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) was empty. In the [next part](custom_flutter_widgets.md) we will replace the default ListTiles with our own cards.

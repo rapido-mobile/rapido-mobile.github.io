@@ -1,15 +1,15 @@
-# Introduction to Rapido
+# Introduction to Rapido Flutter Library
 ## TOC
  * Introduction to Rapido
- * [1: Make a complte app with a few lines of code](./get_started_part_1.md)
- * [2: Brand and light customization](./get_started_part_2.md)
- * [3: Providing your own widgets](./get_started_part_3.md)
- * [4: Adding maps and location](./get_started_part_4.md)
+ * [1: Make a complte app with a few lines of code](./flutter_app_in_few_lines.md)
+ * [2: Brand and light customization](./customize_flutter_app.md)
+ * [3: Providing your own widgets](./custom_flutter_widgets.md)
+ * [4: Adding maps and location](./flutter_maps_and_location.md)
 
-# Introduction to Rapido
+# Overview of Rapido for Flutter
 Rapido is an open source libraruy that intends to make cross platform development easy and fun. We do this by taking a document-centric approach to development, and by following Rapid Application Development (RAD) principles whenever possible.
 
-Skip this page and head to the [tutorial](get_started_part_1.md) if you just want to get to the code. 
+Skip this page and head to the [tutorial](flutter_app_in_few_lines.md) if you just want to get to the code. 
 
 ## What do you mean by "document-centric?"
 Many, if not most, applications are centered around a collection of data, whether entered by the the user, or from a central source, often, but not always, on the Internet somehwere. Applications are designed to allow users to create, retrieve, update, and delete this data, or perform some subset of these actions. In a document centric view, each "entity" that the user can perform these actions on, along with the properties of those  is considered a "document."
@@ -57,4 +57,4 @@ In this code, we are creating a [DocumentList](https://pub.dartlang.org/document
 This code creates this full application:
 ![full app](../assets/basic-ui.png)
 
-This will make a lot more sense if you look at the code, so head over to the [tutorial](get_started_part_1.md).
+This will make a lot more sense if you look at the code, so head over to the [tutorial](flutter_app_in_few_lines.md).

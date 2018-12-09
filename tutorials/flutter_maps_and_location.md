@@ -1,10 +1,10 @@
 # Add Maps and Location
 ## TOC
  * [Introduction to Rapido](./introduction.md)
- * [1: Make a complte app with a few lines of code](./get_started_part_1.md)
- * [2: Brand and light customization](./get_started_part_2.md)
- * [3: Providing your own widgets](./get_started_part_3.md)
- * 4: Adding maps and location](./get_started_part_4.md
+ * [1: Make a complte app with a few lines of code](./flutter_app_in_few_lines.md)
+ * [2: Brand and light customization](./customize_flutter_app.md)
+ * [3: Providing your own widgets](./custom_flutter_widgets.md)
+ * 4: Adding maps and location](./flutter_maps_and_location.md
 
 This is part 4 of the getting started with Rapido tutorial. If you haven't looked through the previous parts, you might want to at least go back and skim those so this part makes sense.
 
@@ -20,7 +20,7 @@ Currently, Rapido supports Google Maps by wrapping and simplifying the Google Ma
 See the (Google Maps Flutter Plugin)[https://pub.dartlang.org/packages/google_maps_flutter#-readme-tab-] for the detailed instructions. 
 
 ## Adding a Map Point Field
-In [part 1](get_started_part_1.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "map-point" field to each Document:
+In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "map-point" field to each Document:
 ```
   DocumentList documentList = DocumentList("Tasker", labels: {
     "Task": "title",

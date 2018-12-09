@@ -4,10 +4,10 @@ Rapido brings Rapid Application Development principles to cross platform mobile 
 ## Tutorial
 In general, the tutorial parts are meant to be followed in order. However, the Introduction is designed to be skippable if you don't care about an overview and such. If you want to just get going with code, just skip to part 1.
  * [Introduction to Rapido](./tutorials/introduction.md)
- * [1: Make a complte app with a few lines of code](./tutorials/get_started_part_1.md)
- * [2: Brand and light customization](./tutorials/get_started_part_2.md)
- * [3: Providing your own widgets](./tutorials/get_started_part_3.md)
- * [4: Adding maps and location](./tutorials/get_started_part_4.md)
+ * [1: Make a complte app with a few lines of code](./tutorials/flutter_app_in_few_lines.md)
+ * [2: Brand and light customization](./tutorials/customize_flutter_app.md)
+ * [3: Providing your own widgets](./tutorials/custom_flutter_widgets.md)
+ * [4: Adding maps and location](./tutorials/flutter_maps_and_location.md)
 
 ## Links
  * [API Documentation](https://pub.dartlang.org/documentation/rapido/latest/)
