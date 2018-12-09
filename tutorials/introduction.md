@@ -1,4 +1,6 @@
-# Tutorial Overview
+# Introduction to Rapido
+
+# TOC
  * Introduction to Rapido
  * [1: Make a complte app with a few lines of code](./tutorials/get_started_part_1.md)
  * [2: Brand and light customization](./tutorials/get_started_part_2.md)
