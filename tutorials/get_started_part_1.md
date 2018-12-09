@@ -176,7 +176,7 @@ To get a flutter package into your project, you add it to your pubspec.yaml file
 dependencies:
   flutter:
     sdk: flutter
-  rapido: ^0.0.11
+  rapido: ^0.0.12
 ```
 
 Again, the indentation levels are very important. If the rapido package on pub.dartlang.org is at a different version than is documented here, use the version on pub.dartlang.org.
@@ -225,10 +225,10 @@ So, let's create a labels property for the DocumentList, and add it to our code 
 ```
 class _TaskerHomePageState extends State<TaskerHomePage> {
   DocumentList documentList = DocumentList("Tasker", labels: {
-    "Task" : "title",
-    "Date" : "date",
-    "Priority" : "pri count",
-    "Note" : "note"
+    "Date": "date",
+    "Task": "title",
+    "Priority": "pri count",
+    "Note": "subtitle"
   });
 
   @override
@@ -243,7 +243,7 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
   }
 }
 ```
-This says that we are creating a DocumentList, and that the UI should show that there is a Task name, a date, a prioriity field, and a not field. Keep your eye on "date" and "pri count" because you will see how naming the fields in that way is particularly useful.
+This says that we are creating a DocumentList, and that the UI should show that there is a Task name, a date, a priority field, and a note field. The field names are each intentionally chosen  because many field names have semantic meaning to Rapido, and Rapido uses those meanings to do a lot of work for you. You
 
 At this point, if you run that application, there is no change, because we have not created a UI.
 
