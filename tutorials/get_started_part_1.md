@@ -1,9 +1,9 @@
 # Tutorial Overview
- * [Introduction to Rapido](./tutorials/introduction.md)
+ * [Introduction to Rapido](./introduction.md)
  * 1: Make a complte app with a few lines of code
- * [2: Brand and light customization](./tutorials/get_started_part_2.md)
- * [3: Providing your own widgets](./tutorials/get_started_part_3.md)
- * [4: Adding maps and location](./tutorials/get_started_part_4.md)
+ * [2: Brand and light customization](./get_started_part_2.md)
+ * [3: Providing your own widgets](./get_started_part_3.md)
+ * [4: Adding maps and location](./get_started_part_4.md)
 
 Maybe you read the [introduction to Rapido](introduction.md), or maybe you didn't. Either ways is fine, in this part we start coding.
 
