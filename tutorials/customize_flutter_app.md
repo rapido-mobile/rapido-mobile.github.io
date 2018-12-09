@@ -2,7 +2,7 @@
 ## TOC
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complte app with a few lines of code](./flutter_app_in_few_lines.md)
- * 2: Brand and light customization](./customize_flutter_app.md
+ * 2: Brand and light customization
  * [3: Providing your own widgets](./custom_flutter_widgets.md)
  * [4: Adding maps and location](./flutter_maps_and_location.md)
 

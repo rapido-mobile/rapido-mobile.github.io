@@ -3,7 +3,7 @@
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complte app with a few lines of code](./flutter_app_in_few_lines.md)
  * [2: Brand and light customization](./customize_flutter_app.md)
- * 3: Providing your own widgets](./custom_flutter_widgets.md
+ * 3: Providing your own widgets
  * [4: Adding maps and location](./flutter_maps_and_location.md)
 
 This is part 3 of the getting started with Rapido tutorial. If you haven't looked through [part 1](flutter_app_in_few_lines.md) and [part 2](customize_flutter_app.md) you might want to at least go back and skim those so this part makes sense.
