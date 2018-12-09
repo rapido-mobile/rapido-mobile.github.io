@@ -5,6 +5,7 @@
  * [2: Brand and light customization](./customize_flutter_app.md)
  * [3: Providing your own widgets](./custom_flutter_widgets.md)
  * [4: Adding maps and location](./flutter_maps_and_location.md)
+ * [Full Code Example](./main.dart)
 
 # Overview of Rapido for Flutter
 Rapido is an open source libraruy that intends to make cross platform development easy and fun. We do this by taking a document-centric approach to development, and by following Rapid Application Development (RAD) principles whenever possible.

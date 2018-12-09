@@ -5,6 +5,7 @@
  * [2: Brand and light customization](./customize_flutter_app.md)
  * [3: Providing your own widgets](./custom_flutter_widgets.md)
  * [4: Adding maps and location](./flutter_maps_and_location.md)
+ * [Full Code Example](./main.dart)
 
 Maybe you read the [introduction to Rapido](introduction.md), or maybe you didn't. Either ways is fine, in this part we start coding.
 
