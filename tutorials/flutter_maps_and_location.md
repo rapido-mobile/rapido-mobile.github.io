@@ -18,7 +18,7 @@ At this point we have a fully functional task application that has some of our b
 ## Adding Your API Key
 Currently, Rapido supports Google Maps by wrapping and simplifying the Google Maps Flutter Plugin. In order to use the location and mapping functionality, you will need to supply your own API key. This involves signing up for an API key from Google, and then adding the key to your AndroidManifest.xml file and your AppleDelegate.m file.
 
-See the (Google Maps Flutter Plugin)[https://pub.dartlang.org/packages/google_maps_flutter#-readme-tab-] for the detailed instructions. 
+See the [Google Maps Flutter Plugin](https://pub.dartlang.org/packages/google_maps_flutter#-readme-tab-) for the detailed instructions. 
 
 ## Adding a Map Point Field
 In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "map-point" field to each Document:
@@ -97,10 +97,10 @@ Then we change the onPressed event for the button to call that function instead:
 Now when the button is pressed, it displays a map with the Documents:  
 ![map with docs](../assets/map-with-docs.png)
 
-It also shows the titles if you click on pins:  
+It also shows the titles and subtitles if you click on pins:  
 ![map with title](../assets/map-with-title.png)
 
-This works because of the semantic meaning of "title" in the Document's fields.
+This works because of the semantic meaning of "title" and "subtitle" in the Document's fields.
 
 # Summary
 This section showed how to add maps and location to your application. It showed, on the way, how to use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) to add functionality to your application.
