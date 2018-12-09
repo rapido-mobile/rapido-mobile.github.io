@@ -5,7 +5,7 @@ This is part 2 of the getting started with Rapido tutorial. If you haven't looke
 We've created an app called Tasker with Rapido. So we have a functional Task list application:  
 ![starter app](../assets/clean-list.png)
 
-While functional, it could use some sprucing up. In this part of the tutorial we will add a background image, and add a prompt to display in case the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html)is empty.
+While functional, it could use some sprucing up. In this part of the tutorial we will add a background image, and add a prompt to display in case the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) is empty.
 
 ## Add a Background Image to Your Project
 Here we will cover the steps necessary to use an image in your Flutter project.
@@ -95,7 +95,7 @@ This makes the application readable while applying a bit of branding:
 When the list is empty, the app is a little boring, even if the background is visible.:  
 ![empty background](../assets/empty-with-background.png)
 
-[DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html), and by extension [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)supports a property called "emptyListWidget." This widget will display whenever the list is empty. You can pass in any widget you like. For our purposes, we will add some centered text.
+[DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html), and by extension [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) supports a property called "emptyListWidget." This widget will display whenever the list is empty. You can pass in any widget you like. For our purposes, we will add some centered text.
 
 ```
   @override
@@ -121,4 +121,4 @@ When the list is empty, the app is a little boring, even if the background is vi
   ![list with prompt](../assets/list-with-prompt.png)
 
 # Summary
-In this part of the tutorial we added a backgfound image to the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), and we added a widget to display when the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html)was empty. In the [next part](get_started_part_3.md) we will replace the default ListTiles with our own cards.
+In this part of the tutorial we added a backgfound image to the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), and we added a widget to display when the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) was empty. In the [next part](get_started_part_3.md) we will replace the default ListTiles with our own cards.

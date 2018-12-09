@@ -22,7 +22,7 @@ In a nutshell, Rapido let's you define documents you care about in a simple way.
 In this code, we are creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
 
 ```
-  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)documentList = DocumentList(
+  DocumentList documentList = DocumentList(
     "Mapped Task List",
     labels: {
       "Task": "title",

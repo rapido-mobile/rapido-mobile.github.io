@@ -203,12 +203,12 @@ This means that we are going to use the documents capabilities from the rapido p
 If your IDE says that it can't find the package, than most likely you have not run packages get, or you have problems with indenting in your YAML.
 
 ## Define a DocumentList
-Now it is finally time to write some code by creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). A [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)is an extension of the base List in the Dart language, but it is specialized to only be a list of Documents. This means that any operation that you can do on a normal List in Dart, you can do on a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)as well. However, [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)has some extra abilities that are specific to Rapido. You can see the [API documentation](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) for details, or just plow ahead and see how the code works.
+Now it is finally time to write some code by creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). A [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is an extension of the base List in the Dart language, but it is specialized to only be a list of Documents. This means that any operation that you can do on a normal List in Dart, you can do on a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) as well. However, [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) has some extra abilities that are specific to Rapido. You can see the [API documentation](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) for details, or just plow ahead and see how the code works.
 
-Defining a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)is easy. All you need to do is provide a String as a "documentType". This is simply an identifier that Rapido uses to organize Documents together in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). So, you could create a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)like this:
+Defining a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is easy. All you need to do is provide a String as a "documentType". This is simply an identifier that Rapido uses to organize Documents together in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). So, you could create a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) like this:
 
 ```
-  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)documentList DocumentList("Tasker");
+  DocumentList documentList DocumentList("Tasker");
 ```
 Then you can start adding Documents to it in code, like this:
 
@@ -218,13 +218,13 @@ Then you can start adding Documents to it in code, like this:
 
 This is of limited utility, because you haven't actually added any data. In fact, for this app, we won't be creating Documents directly, but rather we will let Rapido create all of the UI for end users to manage the Documents themselves. 
 
-To do that, we will give the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)a little bit more information. We will tell it what sort of fields to expect in the Documents, but, more importantly, how to show those fields in the UI. We do this by adding a "labels" property to the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). This is a map where the keys are the labels to show in the user interface, and the values are the keys in the documents. The names of the keys in the documents are important, as you will see soon.
+To do that, we will give the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) a little bit more information. We will tell it what sort of fields to expect in the Documents, but, more importantly, how to show those fields in the UI. We do this by adding a "labels" property to the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). This is a map where the keys are the labels to show in the user interface, and the values are the keys in the documents. The names of the keys in the documents are important, as you will see soon.
 
 So, let's create a labels property for the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), and add it to our code for the _TaskerHomePageState:
 
 ```
 class _TaskerHomePageState extends State<TaskerHomePage> {
-  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)documentList = DocumentList("Tasker", labels: {
+  DocumentList documentList = DocumentList("Tasker", labels: {
     "Date": "date",
     "Task": "title",
     "Priority": "pri count",
@@ -250,11 +250,11 @@ At this point, if you run that application, there is no change, because we have 
 ## Create the UI
 Rapido has a suite of UI components that work with Documents and DocumentLists. The fastest one to use to get your app up and running is called "DocumentListScaffold." This creates all of the UI that you need to the user to manage the data in the app.
 
-So, let's update the code to use the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)instead of building a Scaffold:
+So, let's update the code to use the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) instead of building a Scaffold:
 
 ```
 class _TaskerHomePageState extends State<TaskerHomePage> {
-  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)documentList = DocumentList("Tasker", labels: {
+  DocumentList documentList = DocumentList("Tasker", labels: {
     "Date": "date",
     "Task": "title",
     "Priority": "pri count",
@@ -272,14 +272,14 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
 Now our code is much simpler, but, now there is much more functionality provided.
 
 ### Creation UI
-In the sections below, note how the UI displays the keys from the labels property in the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html)automatically.
+In the sections below, note how the UI displays the keys from the labels property in the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) automatically.
 
 #### Floating Action Button
-The [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)creates a [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html), along with a FloatingActionButton for creating documents:  
+The [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) creates a [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html),  along with a FloatingActionButton for creating documents:  
 ![empty list](../assets/empty-list.png)
 
 #### Create Form
-The [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html)is empty because the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)is empty. But, the user can simply click the add button:  
+The [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) is empty because the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is empty. But, the user can simply click the add button:  
 ![create form](../assets/create.png)
 
 #### Date Picker
@@ -299,7 +299,7 @@ The fields "title" and "subtitle" have semantic meaning to Rapido, which means t
 ![subtitle](../assets/subtitle.png)
 
 ### Sorting
-The [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)automatically addes sorting UI to the DocumentListView:  
+The [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) automatically addes sorting UI to the DocumentListView:  
 ![sorting picker](../assets/sorter.png)
 
 Which can sort on any field, such as priority:  
@@ -310,7 +310,7 @@ Finally, Rapido also automatically supplies add and delete functionality:
 ![add/delete](../assets/add-delete.png)
 
 # Summary
-In this part of the tutorial, you saw how by defining some document structure and using [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)you can create the bones of an application in a few lines of code. [The next section](get_started_part_2.md) will cover how to improve the look and feel of your application.
+In this part of the tutorial, you saw how by defining some document structure and using [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) you can create the bones of an application in a few lines of code. [The next section](get_started_part_2.md) will cover how to improve the look and feel of your application.
 
 
 

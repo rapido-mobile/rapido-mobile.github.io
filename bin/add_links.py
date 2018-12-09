@@ -25,7 +25,7 @@ input = open(sys.argv[1])
 output = open(sys.argv[2], 'w')
 for line in input.xreadlines():
     for c in classes:
-        rtext = " [" + c + "](" + url_base + c + url_tail + ")"
+        rtext = " [" + c + "](" + url_base + c + url_tail + ") "
         rtext1 = " [" + c + "](" + url_base + c + url_tail + "). "
         rtext2 = " [" + c + "](" + url_base + c + url_tail + "), "
         rtext3 = "[" + c + "](" + url_base + c + url_tail + ")"
