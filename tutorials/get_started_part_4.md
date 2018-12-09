@@ -15,7 +15,7 @@ See the (Google Maps Flutter Plugin)[https://pub.dartlang.org/packages/google_ma
 ## Adding a Map Point Field
 In [part 1](get_started_part_1.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "map-point" field to each Document:
 ```
-  DocumentList documentList = DocumentList("Tasker", labels: {
+  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)documentList = DocumentList("Tasker", labels: {
     "Task": "title",
     "Date": "date",
     "Priority": "pri count",
@@ -39,9 +39,9 @@ After adding a location to each item, though, the user can't see the location ye
 ![custom builder](../assets/custom-builder-6.png)
 
 ## Add the Map to the App
-There are different ways we can give the user access to a map. To make this really easy, Rapido comes with a DocumentListMapView that will display all of the Documents in a DocumentList on a map, assuming that those Documents include a map_point field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
+There are different ways we can give the user access to a map. To make this really easy, Rapido comes with a [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListMapView-class.html)that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)on a map, assuming that those Documents include a map_point field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
 
-We will use the additionalActions property of the DocumentListScaffold to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
+We will use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
 
 The additionalActions property is a list of Widgets to display in the title bar. We only need to create one, which will be an IconButton:  
 ```
@@ -95,6 +95,6 @@ It also shows the titles if you click on pins:
 This works because of the semantic meaning of "title" in the Document's fields.
 
 # Summary
-This section showed how to add maps and location to your application. It showed, on the way, how to use the additionalActions property of the DocumentListScaffold to add functionality to your application.
+This section showed how to add maps and location to your application. It showed, on the way, how to use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html)to add functionality to your application.
 
 

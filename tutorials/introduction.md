@@ -19,10 +19,10 @@ With Rapido, all you need to do is define the kind of documents that you want in
 ### Just show me some code already
 In a nutshell, Rapido let's you define documents you care about in a simple way. Either by simply creating documents, or you can define labels for those documents in the UI. The latter way is handy if your app starts without any documents.
 
-In this code, we are creating a DocumentList, which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
+In this code, we are creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
 
 ```
-  DocumentList documentList = DocumentList(
+  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)documentList = DocumentList(
     "Mapped Task List",
     labels: {
       "Task": "title",
@@ -33,7 +33,7 @@ In this code, we are creating a DocumentList, which, you may guess, is a list of
   );
   ```
 
-  This is enough information for Rapido to create all of the UI that users need to manage those documents. The easiest way is to use a DocumentListScaffold, which will create all the UI all at once:
+  This is enough information for Rapido to create all of the UI that users need to manage those documents. The easiest way is to use a [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), which will create all the UI all at once:
 
   ```
   @override
