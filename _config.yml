@@ -2,3 +2,6 @@ theme: jekyll-theme-tactile
 
 plugins:
   - jekyll-seo-tag
+
+# Google Analytics
+google_analytics: UA-131011983-1
