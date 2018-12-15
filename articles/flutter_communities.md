@@ -3,6 +3,8 @@ Clearly flutter is starting to catch on. Online communities are critical these d
 
 So, where does community hang out? It turns, the answer is everywhere and nowhere. Let's take a look at some of the existing online communities.
 
+The project homepage [has a community page](https://flutter.io/community) that provides links to some of these of these forums, and a few that I do not touch on here.
+
 ## pub.dartlang
  * Used for: sharing flutter and dart packages
  * Used by: the community and flutter devs
@@ -79,7 +81,10 @@ If your questions has not been asked before, the StackOverflow format is not con
 
 ![slack](../assets/slack.png) 
 
+The [project community page]() refers to a specific (Slack server)[https://flutterstudygroup.slack.com/] but, it is inivte only. 
+
 [FlutterDev](https://flutterdev.slack.com/messages/C8TJ3GLAJ/) seems to be dead, at least the #general channel. 
+
 [Flutter-IO](https://flutter-io.slack.com/messages/CEK24ST7V/) somewhat more active, but just barely. There does not seem to be any real interaction, at least not in the #general channel. Compared to Gitter and Discord, the Flutter Slack communities just have not taken hold. Maybe 
 
 
