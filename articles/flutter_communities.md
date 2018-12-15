@@ -8,6 +8,8 @@ So, where does community hang out? It turns, the answer is everywhere and nowher
  * Used by: the community and flutter devs
  * My Take: need some functionality? start here
 
+![pub.dartlang.org](../assets/pub.png)
+
 [pub.dartlang.org](https://pub.dartlang.org) is the official site for the community to share packages. It should be your first port of call if you suspect that you are working on a hard problem that perhaps has been solved before. The search feature is robust, the presention let's you decide quickly if a package has the functionality you want, and their are useful links to get you started and help you succeed.
 
 The "ratings" are automated, but include a strong component of "popularity" which means that you can get a sense of which packages the community is adopting fastest.
@@ -16,6 +18,8 @@ The "ratings" are automated, but include a strong component of "popularity" whic
  * Used for: announcements, and tech support
  * Used by: core flutter devs and professional developers
  * My Take: best place for the pulse of the project
+
+![mailing list](../assets/mailing-list.png)
 
 The [flutter dev mailing list](https://groups.google.com/forum/#!forum/flutter-dev) is old school open source community. Discussions can be deep, top posting and inline comments rule. Official announcements are interleaved with calls for help and sometimes deep technical questions. Like any mailing list, turn around time for questions and answers is slow.  
 
@@ -28,9 +32,11 @@ The list is still low traffic, receiving several postings a day, so it is worth 
  * Used by: flutter project, anyone with something to say about flutter
  * My Take: if you enjoy the noise
 
+![twitter](../assets/twitter.png)
+
  In fairness, I should note that I find both Twitter and Facebook to be terrible. I use them as little as possible. Take this section and the next with a grain of salt.
 
- The [office flutter account](https://twitter.com/flutterio?lang=en) is a useful stream of official flutter content and postings. If you want to have a pure feed of such content, this is probably the best place to get that.
+ The [official flutter account](https://twitter.com/flutterio) is a useful stream of official flutter content and postings. If you want to have a pure feed of such content, this is probably the best place to get that.
 
  The [flutter hashtag](https://twitter.com/hashtag/flutter) is the stream of conciousness discussions and weirdness that you would expect from twitter. If it's your thing, the community there seems realatively active.
 
@@ -42,7 +48,9 @@ I'm just leaving this here to say that I did not forget about Facebook, but, als
  * Used by: content creators
  * My Take: daily source of news and articles
 
- [/r/flutterdev](https://reddit/r/flutterdv) gets numerous postings a day. The posts tend to be links to articles and videos, many of which are produced my community members seeking to promote their blog posts, videos, and other content. Official content from the flutter team is also posted there a few times a week. 
+![reddit](../assets/reddit.png)
+
+ [/r/flutterdev](https://www.reddit.com/r/flutterdev) gets numerous postings a day. The posts tend to be links to articles and videos, many of which are produced my community members seeking to promote their blog posts, videos, and other content. Official content from the flutter team is also posted there a few times a week. 
 
  This subreddit is a great way to see what your fellow community members are working on. The posts tend to be light on discussion, though, so it isn't the first place to go if you are looking for interaction.
 
@@ -51,7 +59,9 @@ I'm just leaving this here to say that I did not forget about Facebook, but, als
  * Used by: content creators
  * My Take: quiet, .... too quiet
 
-There is [one somewhat popular Google Plus Group](https://plus.google.com/communities/105405018459127452410). It has not been particularly active in the last few weeks. The content seems to be similar in nature to the content fro Reddit, a combination of posting official Flutter announcements and videos along with content contributed by community members. However, the community does not seem to be thriving there, from the point of view of frequency of posts, at least.
+![google plus](../assets/gplus.png)
+
+The [most populated Google Plus Group](https://plus.google.com/communities/105405018459127452410). It has not been particularly active in the last few weeks. The content seems to be similar in nature to the content fro Reddit, a combination of posting official Flutter announcements and videos along with content contributed by community members. However, the community does not seem to be thriving there, from the point of view of frequency of posts, at least.
 
 ## StackOverflow
  * Used for: Getting help
