@@ -15,3 +15,6 @@ In general, the tutorial parts are meant to be followed in order. However, the I
  * [Rapido on Github](https://github.com/rapido-mobile/rapido-flutter)
  * [Log issues, bugs, and feature requests](https://github.com/rapido-mobile/rapido-flutter/issues)
  * [Our Youtube Channel](https://www.youtube.com/channel/UCeoRpyhpNJmiMuAEJ4WRljg)
+
+ # General Flutter Content
+  * [Where Does the Flutter Community Hangout?](./articles/flutter_communities.md) 
