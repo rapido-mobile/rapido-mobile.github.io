@@ -67,6 +67,7 @@ The [most populated Google Plus Group](https://plus.google.com/communities/10540
  * Used for: Getting help
  * Used by: The Google Index
  * My Take: Everything that could be asked 
+
 [The flutter Tag on Stack Overflow](https://stackoverflow.com/questions/tagged/flutter) has well over 8,000 questions. If you do a web search for pretty much any flutter questions, there is a very high probability that you will end up on StackOverflow. The Q+A and ratings system does its job well of helping you find answers, and highly upvoted answers usually have code that you can copy and paste.
 
 If your questions has not been asked before, the StackOverflow format is not conducive to immediate gratification. Expect some significant lag time between asking a question, and getting answer.
@@ -76,7 +77,9 @@ If your questions has not been asked before, the StackOverflow format is not con
  * Used by: Community members
  * My Take: quiet, .... too quiet
 
-[FlutterDev](https://flutterdev.slack.com/messages/C8TJ3GLAJ/) seems to be dead, at least the #general channel
+![slack](../assets/slack.png) 
+
+[FlutterDev](https://flutterdev.slack.com/messages/C8TJ3GLAJ/) seems to be dead, at least the #general channel. 
 [Flutter-IO](https://flutter-io.slack.com/messages/CEK24ST7V/) somewhat more active, but just barely. There does not seem to be any real interaction, at least not in the #general channel. Compared to Gitter and Discord, the Flutter Slack communities just have not taken hold. Maybe 
 
 
@@ -84,6 +87,8 @@ If your questions has not been asked before, the StackOverflow format is not con
  * Used for: Interactive help
  * Used by: Community
  * My Take: Help and social connection
+
+![discord](../assets/discord.png)
 
 [Discord](https://discord.gg/p7Aj8wF) is quite active. The nice thing about the Discord server is that the it is split into channels the way an active Slack server is. #beginner and #intermediate get many questions a day. The community there can be very interactive at times trying to help people solve their issues. 
 
@@ -100,6 +105,8 @@ Finally, Discord is the only community where I have made any semblence of deeper
  * Used for: Drive by tech support
  * Used by: Community
  * My Take: Most likely place to get an answer fast
+
+![gitter](../assets/gitter.png)
 
 [Gitter](https://gitter.im/flutter/flutter) seems to be the go to place for help in the flutter community, at least judging from the constant stream of questions and converation that happens there. This could be caused by every flutter topic being crammed into the same channel, though, and not broken up into separate channels.
 
