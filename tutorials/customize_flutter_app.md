@@ -5,6 +5,7 @@
  * 2: Brand and light customization
  * [3: Providing your own widgets](./custom_flutter_widgets.md)
  * [4: Adding maps and location](./flutter_maps_and_location.md)
+ * [6: Document and DocumentList](./rapido_documents.md)
  * [Full Code Example](./main.md)
 
 This is part 2 of the getting started with Rapido tutorial. If you haven't looked through [part 1](flutter_app_in_few_lines.md) you might want to at least go back and skim that so this part makes sense.
