@@ -53,7 +53,7 @@ Future _decodeJson(jsonBody) async {
 None of this is particularly specific to Rapido so far.
 
 ## SearchBar
-There are different ways to create a search interface. I opted to grab [the SearchBar package fromo pub](https://pub.dartlang.org/packages/flutter_search_bar). This creates a search bar in the title bar of the app.
+There are different ways to create a search interface. I opted to grab [the SearchBar package from pub](https://pub.dartlang.org/packages/flutter_search_bar). This creates a search bar in the title bar of the app.
 
 ## Using the Decoded JSON
 First, do some simple string formatting to create the URL for fetching the data:
@@ -86,7 +86,7 @@ The we can iterate through the results:
 ```
 
 ## Creating Documents
-Finally, we are ready to create a [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) with each search result. Note that it is typical to write some very specific code that parse out the API result, and make it work the way we want. In this example, we have to pull out "location" which you can see is actually another map, and then pull out the name of the location, which is the only part we care about:
+Finally, we are ready to create a [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) with each search result. Note that it is typical to write some very specific code that parse out the API result, and make it work the way we want. In this example, we have to pull out "location" which you can see is actually another map, and then pull out the name of the location, which is the only part of the location object we care about:
 
 ```dart
   Document _docFromSearchResultsMap(Map<String, dynamic> map) {
@@ -122,7 +122,7 @@ Because the [Document](https://pub.dartlang.org/documentation/rapido/latest/docu
 
 Create a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) along with a documentType string to keep track of the results.
 ```dart
-  [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) _documentList = DocumentList("c137Results");
+  DocumentList _documentList = DocumentList("c137Results");
 ```
 
 Now when we iterate through the results, we can add each [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) to the [DocumentList]([Document](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)).
