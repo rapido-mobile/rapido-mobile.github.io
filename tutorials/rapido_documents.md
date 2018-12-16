@@ -9,7 +9,7 @@
 
 In this part of the tutorial, we will take a look at using [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). So far in the example application in the tutorial, the user has been creating, editing, and deleting Documents with the UI that is automatically provided by Rapido for that purpose. In this part of the tutorial, we will be working with JSON we receive from a web service. 
 
-![rick and morty](c137.png)
+![rick and morty](../assets/c137.png)
 
 ## Working with JSON
 ### Web API
