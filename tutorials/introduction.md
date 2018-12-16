@@ -25,6 +25,8 @@ Rapid Application Development means that, as a developer, you should get a lot o
 ## What does Rapido do for you?
 With Rapido, all you need to do is define the kind of documents that you want in a very easy way, and rapido will provide all of the UI that your users need to interact with those documents at run time. 
 
+Rapido also handles persistence for you in a very easy way. Every change to a [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) or a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is automatically saved on the user's device with no extra code required.
+
 ### Just show me some code already
 In a nutshell, Rapido let's you define documents you care about in a simple way. Either by simply creating documents, or you can define labels for those documents in the UI. The latter way is handy if your app starts without any documents.
 
