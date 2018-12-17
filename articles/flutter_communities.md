@@ -81,7 +81,7 @@ If your questions has not been asked before, the StackOverflow format is not con
 
 ![slack](../assets/slack.png) 
 
-The [project community page]() refers to a specific (Slack server)[https://flutterstudygroup.slack.com/] but, it is inivte only, and it's not very clear how to secure an invite, or why one would want to do so. There are other Flutter related Slack servers, though.
+The [project community page]() refers to a specific [Slack server](https://flutterstudygroup.slack.com/) but, it is inivte only, and it's not very clear how to secure an invite, or why one would want to do so. There are other Flutter related Slack servers, though.
 
 [FlutterDev](https://flutterdev.slack.com/messages/C8TJ3GLAJ/) seems to be dead, at least the #general channel. 
 
