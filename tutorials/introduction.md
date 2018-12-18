@@ -8,7 +8,7 @@
  * [Full Code Example](./main.dart)
 
 # Overview of Rapido for Flutter
-Rapido is an open source libraruy that intends to make cross platform development easy and fun. We do this by taking a document-centric approach to development, and by following Rapid Application Development (RAD) principles whenever possible.
+Rapido is an open source library that intends to make cross platform development easy and fun. We do this by taking a document-centric approach to development, and by following Rapid Application Development (RAD) principles whenever possible.
 
 Skip this page and head to the [tutorial](flutter_app_in_few_lines.md) if you just want to get to the code. 
 
