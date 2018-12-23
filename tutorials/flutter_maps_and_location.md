@@ -29,10 +29,10 @@ In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension 
     "Date": "date",
     "Priority": "pri count",
     "Note": "note",
-    "Map Location" : "map_point"
+    "Map Location" : "map point"
   });
 ```
-Like "date" and "count", "map_point" has semantic meaning in Rapido. It means that you want to store a point on a Map. (As an aside, there are other field names with semantic, such as "title," which you will see in a bit.)
+Like "date" and "count", "map point" has semantic meaning in Rapido. It means that you want to store a point on a Map. (As an aside, there are other field names with semantic, such as "title," which you will see in a bit.)
 
 ## Picker UI
 After closing the app, and restarting it, if we go through the UI and choose the edit button for a task, you will see that a new field is exposed, named "Map Location." This is expected because that is what we named it in the labels property. However, if you look closely, notice that there is a map icon button in the field:  
@@ -48,7 +48,7 @@ After adding a location to each item, though, the user can't see the location ye
 ![custom builder](../assets/custom-builder-6.png)
 
 ## Add the Map to the App
-There are different ways we can give the user access to a map. To make this really easy, Rapido comes with a [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListMapView-class.html) that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) on a map, assuming that those Documents include a map_point field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
+There are different ways we can give the user access to a map. To make this really easy, Rapido comes with a [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListMapView-class.html) that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) on a map, assuming that those Documents include a map point field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
 
 We will use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
 

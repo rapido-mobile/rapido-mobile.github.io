@@ -30,7 +30,7 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
     "Date": "date",
     "Priority": "pri count",
     "Note": "subtitle",
-    "Map Location": "map_point"
+    "Map Location": "map point"
   });
 
   void navigateToMap() {
