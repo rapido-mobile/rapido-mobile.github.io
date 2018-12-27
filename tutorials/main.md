@@ -30,7 +30,7 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
     "Date": "date",
     "Priority": "pri count",
     "Note": "subtitle",
-    "Map Location": "map point"
+    "Map Location": "latlong"
   });
 
   void navigateToMap() {
@@ -75,6 +75,7 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
             doc["date"],
             style: textTheme.headline,
           ),
+          TypedDisplayField(fieldName: "latlong", document: doc, boxSize: 200.00,),
           Text(
             doc["subtitle"],
             style: textTheme.subhead,

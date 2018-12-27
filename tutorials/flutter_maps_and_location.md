@@ -21,34 +21,34 @@ Currently, Rapido supports Google Maps by wrapping and simplifying the Google Ma
 
 See the [Google Maps Flutter Plugin](https://pub.dartlang.org/packages/google_maps_flutter#-readme-tab-) for the detailed instructions. 
 
-## Adding a Map Point Field
-In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "map-point" field to each Document:
+## Adding a latlong Field
+In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension the fields, that we expect to include in the UI for Document. We will revisit that by adding a "latlong" field to each Document:
 ```dart
   DocumentList documentList = DocumentList("Tasker", labels: {
     "Task": "title",
     "Date": "date",
     "Priority": "pri count",
     "Note": "note",
-    "Map Location" : "map point"
+    "Map Location" : "latlong"
   });
 ```
-Like "date" and "count", "map point" has semantic meaning in Rapido. It means that you want to store a point on a Map. (As an aside, there are other field names with semantic, such as "title," which you will see in a bit.)
+Like "date" and "count", "latlong" has semantic meaning in Rapido. It means that you want to store a point on a map. (As an aside, there are other field names with semantic, such as "title," which you will see in a bit.)
 
 ## Picker UI
-After closing the app, and restarting it, if we go through the UI and choose the edit button for a task, you will see that a new field is exposed, named "Map Location." This is expected because that is what we named it in the labels property. However, if you look closely, notice that there is a map icon button in the field:  
-![form with location](../assets/form-with-location.png)
-
-And if we click on that button, it brings up a picker with a map. The user can move the map around and click the floating check mark button to choose a location:  
+After closing the app, and restarting it, if we go through the UI and choose the edit button for a task, you will see that a new field is exposed, named "Map Location." The field is a map that the user can drag around. The flag in the center of the map represents the location that the user would like to choose. By Default, the map starts at the user's current location.
 ![location picker](../assets/location-picker.png)
 
-And you can see that the location is added to the form:  
-![form with complete location](../assets/form-with-complete-location.png)
+After adding a location to each item, though, the user can't see the location yet.
 
-After adding a location to each item, though, the user can't see the location yet:  
-![custom builder](../assets/custom-builder-6.png)
+To start, we can add a small version of the map to the custom cards. This is greatly simplified using Rapido's [TypedDisplayField]((https://pub.dartlang.org/documentation/rapido/latest/documents/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
+```
+          TypedDisplayField(fieldName: "latlong", document: doc, boxSize: 200.00,),
+```
+And the map will be displayed for each task that has an associated location.
+![typed display latlong](../assets/typed-display-latlong.png)
 
 ## Add the Map to the App
-There are different ways we can give the user access to a map. To make this really easy, Rapido comes with a [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListMapView-class.html) that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) on a map, assuming that those Documents include a map point field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
+It's easy to make a much more interactive experience using Rapido's [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListMapView-class.html) that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) on a map, assuming that those Documents include a latlong field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
 
 We will use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
 
