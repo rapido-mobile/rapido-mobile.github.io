@@ -5,6 +5,7 @@
  * [2: Brand and light customization](./customize_flutter_app.md)
  * 3: Providing your own widgets
  * [4: Adding maps and location](./flutter_maps_and_location.md)
+ * [5: Adding images](../flutter_images.md)
  * [6: Document and DocumentList](./rapido_documents.md)
  * [Full Code Example](./main.md)
 
