@@ -39,7 +39,7 @@ Like "title", "siubtitle", "date", "count", and "latlong", "image" has semantic 
 After closing the app and restarting it, if you create a new task or edit an existing one, you will see that there is a new picker in the DocumentForm:  
 ![image-picker](../assets/image-picker.png)
 
-The image picker is blank because no image is selected by defaults. The buttons to the right are used to choose or clear the image. In order from the top, the user can choose an image from their phone's photo gallery, their phone's camera, or they can enter a URL that points to an image.
+The image picker is blank because no image is selected by default. The buttons to the right are used to choose or clear the image. In order from the top, the user can choose an image from their phone's photo gallery, their phone's camera, or they can enter a URL that points to an image.
 
 ### Gallery and Camera Images
 Tapping the gallery or camera icon button, will take the user through the android or iOS native UI for choosing from those sources. And, when done, will display an image in the image picker:  
@@ -55,6 +55,8 @@ The URL picker is a little different because it expects the user to enter a stri
 
 After the user enters the URL, the image picker "just works":  
 ![url-picker](../assets/url-chosen.png)
+
+After saving, Rapido will save the path to the selected image or the URL, ready to display it to the user elswhere in the app.
 
 ## Default DocumentListView
 The default [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListView-class.html) "just works" as well. It infers that the field name ending in "image" should display and displays all three kinds of images: 
@@ -105,7 +107,7 @@ Again, based on the fieldName property, Rapido will know to present an image, wh
   }
   ```
 
-Then when we do a hot reload, we see that the images are displayed:  
+Then when we do a hot reload, we see that the images are displayed, whether from the camera, the gallery, or the internet:  
 ![typed display](../assets/typed-display-image.png)
 
 # Summary
