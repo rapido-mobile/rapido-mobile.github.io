@@ -36,13 +36,13 @@ As you may have guessed by now, if you want to include images, you simply add a 
 Like "title", "siubtitle", "date", "count", and "latlong", "image" has semantic meaning in Rapido. It means that you want to store a string that points to an image, either a path on the device, or a URL to an image available on the web. Rapido can deal with paths or images just fine, as you will see.
 
 ## Picker UI
-After closing the app and restarting it, if you create a new task or edit an existing one, you will see that there is a new picker in the DocumentForm: 
+After closing the app and restarting it, if you create a new task or edit an existing one, you will see that there is a new picker in the DocumentForm:  
 ![image-picker](../assets/image-picker.png)
 
 The image picker is blank because no image is selected by defaults. The buttons to the right are used to choose or clear the image. In order from the top, the user can choose an image from their phone's photo gallery, their phone's camera, or they can enter a URL that points to an image.
 
 ### Gallery and Camera Images
-Tapping the gallery or camera icon button, will take the user through the android or iOS native UI for choosing from those sources. And, when done, will display an image in the image picker: 
+Tapping the gallery or camera icon button, will take the user through the android or iOS native UI for choosing from those sources. And, when done, will display an image in the image picker:  
 ![image-picker](../assets/image-picker-chosen.png)
 
 Note that the Android Emulator provides both an emulated camera and an emulated gallery. That's what I am using in these screenshots. Don't worry, I tested on real devices, and it works fine.
@@ -53,7 +53,7 @@ Additionally, Rapido copies the images from the camera or gallery into the local
 The URL picker is a little different because it expects the user to enter a string. So it pops up a dialog for the user to enter a URL: 
 ![url-picker](../assets/url-picker.png)
 
-After the user enters the URL, the image picker "just works": 
+After the user enters the URL, the image picker "just works":  
 ![url-picker](../assets/url-chosen.png)
 
 ## Default DocumentListView
@@ -105,7 +105,7 @@ Again, based on the fieldName property, Rapido will know to present an image, wh
   }
   ```
 
-Then when we do a hot reload, we see that the images are displayed: 
+Then when we do a hot reload, we see that the images are displayed:  
 ![typed display](../assets/typed-display-image.png)
 
 # Summary
