@@ -16,7 +16,7 @@ classes = [
     "DocumentList",
 ]
 
-url_base = "https://pub.dartlang.org/documentation/rapido/latest/documents/"
+url_base = "https://pub.dartlang.org/documentation/rapido/latest/rapido/"
 url_tail = "-class.html"
 
 input = sys.stdin

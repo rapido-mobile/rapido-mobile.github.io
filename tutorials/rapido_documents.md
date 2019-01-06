@@ -9,7 +9,7 @@
  * 6: Document and DocumentList
  * [Full Code Example](./main.md)
 
-In this part of the tutorial, we will take a look at using [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). So far in the example application in the tutorial, the user has been creating, editing, and deleting Documents with the UI that is automatically provided by Rapido for that purpose. In this part of the tutorial, we will be working with JSON we receive from a web service. 
+In this part of the tutorial, we will take a look at using [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html). So far in the example application in the tutorial, the user has been creating, editing, and deleting Documents with the UI that is automatically provided by Rapido for that purpose. In this part of the tutorial, we will be working with JSON we receive from a web service. 
 
 ![rick and morty](../assets/c137.png)
 
@@ -87,7 +87,7 @@ The we can iterate through the results:
 ```
 
 ## Creating Documents
-Finally, we are ready to create a [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) with each search result. Note that it is typical to write some very specific code that parse out the API result, and make it work the way we want. In this example, we have to pull out "location" which you can see is actually another map, and then pull out the name of the location, which is the only part of the location object we care about:
+Finally, we are ready to create a [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) with each search result. Note that it is typical to write some very specific code that parse out the API result, and make it work the way we want. In this example, we have to pull out "location" which you can see is actually another map, and then pull out the name of the location, which is the only part of the location object we care about:
 
 ```dart
   Document _docFromSearchResultsMap(Map<String, dynamic> map) {
@@ -114,19 +114,19 @@ Finally, we are ready to create a [Document](https://pub.dartlang.org/documentat
   }
 ```
 
-Each time we create a [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html), the search result is automatically saved on the user's device. This is great because if they come back to the app after closing it, their results will still be there.
+Each time we create a [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html), the search result is automatically saved on the user's device. This is great because if they come back to the app after closing it, their results will still be there.
 
-This also means that you can use the search results anywhere in your app by either passing along the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), or, you can create a new instance of the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) with the same documentType, and it will read the results from disk. This can dramatically simplify your code base.
+This also means that you can use the search results anywhere in your app by either passing along the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html), or, you can create a new instance of the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) with the same documentType, and it will read the results from disk. This can dramatically simplify your code base.
 
 ## Creating the List
-Because the [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html)s fit so naturally fit into a List, we will use a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) to organize them.
+Because the [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html)s fit so naturally fit into a List, we will use a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) to organize them.
 
-Create a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) along with a documentType string to keep track of the results.
+Create a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) along with a documentType string to keep track of the results.
 ```dart
   DocumentList _documentList = DocumentList("c137Results");
 ```
 
-Now when we iterate through the results, we can add each [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) to the [DocumentList]([Document](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html)).
+Now when we iterate through the results, we can add each [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) to the [DocumentList]([Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html)).
 
 ```dart
         resultList.forEach((dynamic item) {
@@ -135,19 +135,19 @@ Now when we iterate through the results, we can add each [Document](https://pub.
 ```
 
 ## Clearing the Results
-If the user does another search, we don't want the old results hanging around. Because [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is just a List with super powers, it is easy to clean up:
+If the user does another search, we don't want the old results hanging around. Because [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) is just a List with super powers, it is easy to clean up:
 
 ```dart
     _documentList.clear();
 ```
 
-Note that this will delete all of the [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html)s in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) from the user's device, which is what we want.
+Note that this will delete all of the [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html)s in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) from the user's device, which is what we want.
 
 ## Displaying the Results
-Now that you have a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) filled with [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html)s, you can focus on displaying the results as you wish. You can see how I created the [Charcter Card](https://github.com/rapido-mobile/c137/blob/master/lib/character_card.dart) for an example, but I bet you can do better.
+Now that you have a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) filled with [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html)s, you can focus on displaying the results as you wish. You can see how I created the [Charcter Card](https://github.com/rapido-mobile/c137/blob/master/lib/character_card.dart) for an example, but I bet you can do better.
 
 # Summary
-This section covered decoding JSON and using [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) and easily present them.
+This section covered decoding JSON and using [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) and easily present them.
 
 Checkout [the full example](https://github.com/rapido-mobile/c137) on Github.
 

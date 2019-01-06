@@ -27,12 +27,12 @@ Rapid Application Development means that, as a developer, you should get a lot o
 ## What does Rapido do for you?
 With Rapido, all you need to do is define the kind of documents that you want in a very easy way, and rapido will provide all of the UI that your users need to interact with those documents at run time. 
 
-Rapido also handles persistence for you in a very easy way. Every change to a [Document](https://pub.dartlang.org/documentation/rapido/latest/documents/Document-class.html) or a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) is automatically saved on the user's device with no extra code required.
+Rapido also handles persistence for you in a very easy way. Every change to a [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) or a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) is automatically saved on the user's device with no extra code required.
 
 ### Just show me some code already
 In a nutshell, Rapido let's you define documents you care about in a simple way. Either by simply creating documents, or you can define labels for those documents in the UI. The latter way is handy if your app starts without any documents.
 
-In this code, we are creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
+In this code, we are creating a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html), which, you may guess, is a list of documents. As we create the list, we are supplying some optional information for how we want to display the fields of the documents in the UI:
 
 ```dart
   DocumentList documentList = DocumentList(
@@ -46,7 +46,7 @@ In this code, we are creating a [DocumentList](https://pub.dartlang.org/document
   );
   ```
 
-  This is enough information for Rapido to create all of the UI that users need to manage those documents. The easiest way is to use a [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), which will create all the UI all at once:
+  This is enough information for Rapido to create all of the UI that users need to manage those documents. The easiest way is to use a [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListScaffold-class.html), which will create all the UI all at once:
 
   ```dart
   @override

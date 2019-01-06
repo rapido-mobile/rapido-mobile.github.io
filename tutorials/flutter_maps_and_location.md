@@ -41,7 +41,7 @@ After closing the app, and restarting it, if we go through the UI and choose the
 
 After adding a location to each item, though, the user can't see the location yet.
 
-To start, we can add a small version of the map to the custom cards. This is greatly simplified using Rapido's [TypedDisplayField]((https://pub.dartlang.org/documentation/rapido/latest/documents/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
+To start, we can add a small version of the map to the custom cards. This is greatly simplified using Rapido's [TypedDisplayField]((https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
 ```
           TypedDisplayField(fieldName: "latlong", document: doc, boxSize: 200.00,),
 ```
@@ -49,9 +49,9 @@ And the map will be displayed for each task that has an associated location.
 ![typed display latlong](../assets/typed-display-latlong.png)
 
 ## Add the Map to the App
-It's easy to make a much more interactive experience using Rapido's [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListMapView-class.html) that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) on a map, assuming that those Documents include a latlong field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
+It's easy to make a much more interactive experience using Rapido's [DocumentListMapView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListMapView-class.html) that will display all of the Documents in a [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) on a map, assuming that those Documents include a latlong field. So, all we need to do is create a place to display that. We could that with tabs, with a dialog, or in any number of ways. 
 
-We will use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
+We will use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListScaffold-class.html) to add a map button to the title bar of the app, and then navigate to a DocumentListMapView.
 
 The additionalActions property is a list of Widgets to display in the title bar. We only need to create one, which will be an IconButton:  
 ```dart
@@ -105,6 +105,6 @@ It also shows the titles and subtitles if you click on pins:
 This works because of the semantic meaning of "title" and "subtitle" in the Document's fields.
 
 # Summary
-This section showed how to add maps and location to your application. It showed, on the way, how to use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html) to add functionality to your application.
+This section showed how to add maps and location to your application. It showed, on the way, how to use the additionalActions property of the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListScaffold-class.html) to add functionality to your application.
 
 

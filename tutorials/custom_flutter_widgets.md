@@ -15,12 +15,12 @@ This is part 3 of the getting started with Rapido tutorial. If you haven't looke
 At this point, we have a functioning application, and we have applied some branding:  
 ![with branding](../assets/start-with-branding.png)
 
-We've hardly had to write any code to get to this point, because Rapido supplies default implementation for almost all the UI you need. For example, Rapido provides a default ListTile to display in the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) that comes with the DocumentListScaffold.
+We've hardly had to write any code to get to this point, because Rapido supplies default implementation for almost all the UI you need. For example, Rapido provides a default ListTile to display in the [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListView-class.html) that comes with the DocumentListScaffold.
 
 Rapido makes it easy to supply your own widgets.
 
 ## customItemBuilder
-The [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html), and by extension the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListScaffold-class.html), have a customItemBuilder property. This property is a function that returns a widget build for each document in the list. In this way, you can write a function to replace the default ListTile. Note that if you supply a customItemBuilder function, the titleFields and subtitleField properties are ignored.
+The [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListView-class.html), and by extension the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListScaffold-class.html), have a customItemBuilder property. This property is a function that returns a widget build for each document in the list. In this way, you can write a function to replace the default ListTile. Note that if you supply a customItemBuilder function, the titleFields and subtitleField properties are ignored.
 
 We'll start with a very simple customWidgetBuilder:  
 ```dart
@@ -28,7 +28,7 @@ We'll start with a very simple customWidgetBuilder:
         return Text(doc["title"]);
   }
   ```
-This function is called for each item in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html), and returns a Text with the title as the text.
+This function is called for each item in the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html), and returns a Text with the title as the text.
 
 Of course, we need to set the customItemBuilder proprty to use it:
 ```dart
@@ -130,9 +130,9 @@ Now the Card color gets set based on the priority:
 ## Use DocumentActionsButton
 One important thing to note at this point, is that the UI that we have not replaced (the AddDocumentFloatingActionButto, and the DocumentListSortButton) still work perfectly.
 
-However, when we replaced the default ListTile, we lost the [DocumentActionsButton](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentActionsButton-class.html) which allows the user to edit or delete a task. We could add our own custom UI for this, and use the functions in Document and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). However, all of the different UI elements in Rapido are designed so you can mix and match them with your own widgets. 
+However, when we replaced the default ListTile, we lost the [DocumentActionsButton](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentActionsButton-class.html) which allows the user to edit or delete a task. We could add our own custom UI for this, and use the functions in Document and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html). However, all of the different UI elements in Rapido are designed so you can mix and match them with your own widgets. 
 
-So, let's just add a [DocumentActionsButton](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentActionsButton-class.html) to each Card. To do this, we just have to tell the [DocumentActionsButton](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentActionsButton-class.html) widget two things, the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html) to act on, and the index of the Document in that [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentList-class.html). The index is passed into the customItemBuilder function, so we can just pass it along.
+So, let's just add a [DocumentActionsButton](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentActionsButton-class.html) to each Card. To do this, we just have to tell the [DocumentActionsButton](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentActionsButton-class.html) widget two things, the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) to act on, and the index of the Document in that [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html). The index is passed into the customItemBuilder function, so we can just pass it along.
 ```dart
          DocumentActionsButton(documentList, index: index)
 ```

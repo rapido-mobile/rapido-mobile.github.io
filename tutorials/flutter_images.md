@@ -18,7 +18,7 @@ In this section we will add an image to each task.
 We're going to rewind a bit, back to [ Part 2: Brand and light customization](./customize_flutter_app.md) and then go ahead and add images instead of location to each item. Using location and images together is absolutely fine and works perfectly well, but it'll keep the tutorial a little more simple if we don't mix them.
 
 ## Adding an Image Field
-As you may have guessed by now, if you want to include images, you simply add a field name that ends in the word "image" to your list of labels in your [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html).
+As you may have guessed by now, if you want to include images, you simply add a field name that ends in the word "image" to your list of labels in your [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListView-class.html).
 
 ```dart
   DocumentList documentList = DocumentList(
@@ -57,11 +57,11 @@ After the user enters the URL, the image picker "just works":
 ![url-picker](../assets/url-chosen.png)
 
 ## Default DocumentListView
-The default [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/documents/DocumentListView-class.html) "just works" as well. It infers that the field name ending in "image" should display and displays all three kinds of images: 
+The default [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListView-class.html) "just works" as well. It infers that the field name ending in "image" should display and displays all three kinds of images: 
 ![list images](../assets/list-with-images.png)
 
 ## TypedDisplayField
-Rapido can render an appropriate widget for any field in a Document using the [TypedDisplayField](https://pub.dartlang.org/documentation/rapido/latest/documents/TypedDisplayField-class.html) Widget. The way it works is simple. Give it the Document, field name, and size that you want to display, for example:
+Rapido can render an appropriate widget for any field in a Document using the [TypedDisplayField](https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-class.html) Widget. The way it works is simple. Give it the Document, field name, and size that you want to display, for example:
 
 ```dart
           TypedDisplayField(
@@ -109,4 +109,4 @@ Then when we do a hot reload, we see that the images are displayed:
 ![typed display](../assets/typed-display-image.png)
 
 # Summary
-This part showed how to add images to your application and how to use [TypedDisplayField](https://pub.dartlang.org/documentation/rapido/latest/documents/TypedDisplayField-class.html) to show them in your own UI.
+This part showed how to add images to your application and how to use [TypedDisplayField](https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-class.html) to show them in your own UI.
