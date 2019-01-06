@@ -8,6 +8,7 @@ In general, the tutorial parts are meant to be followed in order. However, the I
  * [2: Brand and light customization](./tutorials/customize_flutter_app.md)
  * [3: Providing your own widgets](./tutorials/custom_flutter_widgets.md)
  * [4: Adding maps and location](./tutorials/flutter_maps_and_location.md)
+ * [5: Adding images](./tutorials/flutter_images.md)
  * [6: Document and DocumentList](./tutorials/rapido_documents.md)
 
 ## Links
