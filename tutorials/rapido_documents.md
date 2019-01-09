@@ -61,7 +61,7 @@ First, do some simple string formatting to create the URL for fetching the data:
 ```dart
     String url = "https://rickandmortyapi.com/api/character/?name=$value";
 ```
-Then, we can use our get and decode code 
+Then, we can use our get and decode code:
 
 ```dart
  getAndDecodeRemoteJSon(url).then((Map map) {
@@ -112,6 +112,15 @@ Finally, we are ready to create a [Document](https://pub.dartlang.org/documentat
       },
     );
   }
+```
+
+As an aside, note that a Document is built by providing a Map. You can create a document by passing a dart object directly. Rather, you must create a map to represent the object. For example, if you have an Event object, with say, a title property and a date property, you must convert this to a map before you pass it to the Document:
+
+```dart
+Map<String, dynamic> map = {"title":event.title, "date":event.date};
+Document document = Document(initialValues: map);
+}
+
 ```
 
 Each time we create a [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html), the search result is automatically saved on the user's device. This is great because if they come back to the app after closing it, their results will still be there.
