@@ -42,9 +42,9 @@ After closing the app, and restarting it, if we go through the UI and choose the
 The default ListTile will show the location on a tiny map:  
 ![dedfault map](../assets/list-tile-maps.png)
 
-So there is some default functionality to make sue of the locations after adding a location to each item. But this doesn't help us much in our custom widgets. We should show the map location on our Cards.
+So there is some default functionality to make sure of the locations after adding a location to each item. But this doesn't help us much in our custom widgets. We should show the map location on our Cards.
 
-This is greatly simplified using Rapido's [TypedDisplayField]((https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
+This is greatly simplified using Rapido's [TypedDisplayField](https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
 ```
           TypedDisplayField(fieldName: "latlong", document: doc, boxSize: 200.00,),
 ```
