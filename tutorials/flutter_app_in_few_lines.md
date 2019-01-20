@@ -186,7 +186,7 @@ To get a flutter package into your project, you add it to your pubspec.yaml file
 dependencies:
   flutter:
     sdk: flutter
-  rapido: ^0.0.12
+  rapido: ^0.1.0
 ```
 
 Again, the indentation levels are very important. If the rapido package on pub.dartlang.org is at a different version than is documented here, use the version on pub.dartlang.org.
@@ -205,10 +205,8 @@ To actually use Rapido in your code, you need to import it into you main.dart fi
 Add this import to the top of that file right under the existing import:
 
 ```dart
-import 'package:rapido/documents.dart';
+import 'package:rapido/rapido.dart';
 ```
-
-This means that we are going to use the documents capabilities from the rapido package, which is all that is available so far.
 
 If your IDE says that it can't find the package, than most likely you have not run packages get, or you have problems with indenting in your YAML.
 
@@ -265,6 +263,7 @@ So, let's update the code to use the [DocumentListScaffold](https://pub.dartlang
 ```dart
 class _TaskerHomePageState extends State<TaskerHomePage> {
   DocumentList documentList = DocumentList("Tasker", labels: {
+    "Complete": "done?",
     "Date": "date",
     "Task": "title",
     "Priority": "pri count",
@@ -292,6 +291,9 @@ The [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/
 The [DocumentListView](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListView-class.html) is empty because the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) is empty. But, the user can simply click the add button:  
 ![create form](../assets/create.png)
 
+#### Checkbox
+Because you named the field done? ending with a "?", rapido guesses that you want to done? to be a boolean value. Therefore, it automatically creates checkbox UI for you.
+
 #### Date Picker
 Because you named the field for the date in something that ends in "date," Rapido guesses that you want the user to enter a date for this field, and so creates a date picker automatically:  
 ![date field](../assets/date.png)
@@ -315,9 +317,13 @@ The [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/
 Which can sort on any field, such as priority:  
 ![sorted](../assets/sorted.png)
 
-### Add and Delete
-Finally, Rapido also automatically supplies add and delete functionality:  
-![add/delete](../assets/add-delete.png)
+### Edit and Delete
+Finally, Rapido also automatically supplies edit and delete functionality:  
+![add/delete](../assets/edit-delete.png)
+
+### Active Checkboxes
+In the default ListTile, checkboxes are active and the values persist when they are changed. Checkboxes are the only widgets that are active in the default ListTile.
+![checked](../assets/checked.png)
 
 # Summary
 In this part of the tutorial, you saw how by defining some document structure and using [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListScaffold-class.html) you can create the bones of an application in a few lines of code. [The next section](customize_flutter_app.md) will cover how to improve the look and feel of your application.
