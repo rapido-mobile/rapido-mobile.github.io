@@ -66,8 +66,6 @@ We want to add a background image, so will use a DecorationImage to display an i
   Widget build(BuildContext context) {
     return DocumentListScaffold(
       documentList,
-      titleKeys: ["date", "title", "pri count"],
-      subtitleKey: "note",
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage("assets/background.jpg"),
@@ -86,11 +84,11 @@ So, it worked, but of course the black image makes the app impossible to read an
   Widget build(BuildContext context) {
     return DocumentListScaffold(
       documentList,
-      titleKeys: ["date", "title", "pri count"],
-      subtitleKey: "note",
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/background.jpg"),
+          image: AssetImage(
+            "assets/background.jpg",
+          ),
           colorFilter: ColorFilter.mode(
               Colors.white.withOpacity(0.05), BlendMode.dstATop),
         ),
@@ -112,11 +110,11 @@ When the list is empty, the app is a little boring, even if the background is vi
   Widget build(BuildContext context) {
     return DocumentListScaffold(
       documentList,
-      titleKeys: ["date", "title", "pri count"],
-      subtitleKey: "note",
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/background.jpg"),
+          image: AssetImage(
+            "assets/background.jpg",
+          ),
           colorFilter: ColorFilter.mode(
               Colors.white.withOpacity(0.05), BlendMode.dstATop),
         ),
