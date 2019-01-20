@@ -29,7 +29,7 @@ In [part 1](flutter_app_in_few_lines.md) we defined the labels and by extension 
     "Task": "title",
     "Date": "date",
     "Priority": "pri count",
-    "Note": "note",
+    "Note": "subtitle",
     "Map Location" : "latlong"
   });
 ```
