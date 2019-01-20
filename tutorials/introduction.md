@@ -36,12 +36,12 @@ In this code, we are creating a [DocumentList](https://pub.dartlang.org/document
 
 ```dart
   DocumentList documentList = DocumentList(
-    "Mapped Task List",
+    "Tasker",
     labels: {
-    "Date": "date",
-    "Task": "title",
-    "Priority": "pri count",
-    "Note": "subtitle"
+      "Date": "date",
+      "Task": "title",
+      "Priority": "pri count",
+      "Note": "subtitle",
     },
   );
   ```
