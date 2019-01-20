@@ -1,6 +1,5 @@
-```dart
 import 'package:flutter/material.dart';
-import 'package:rapido/documents.dart';
+import 'package:rapido/rapido.dart';
 
 void main() => runApp(Tasker());
 
@@ -33,17 +32,11 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
     "Map Location": "latlong"
   });
 
-  void navigateToMap() {
-    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
-      return DocumentListMapView(documentList);
-    }));
-  }
-
+  @override
   @override
   Widget build(BuildContext context) {
     return DocumentListScaffold(
       documentList,
-      customItemBuilder: customItemBuilder,
       additionalActions: <Widget>[
         IconButton(icon: Icon(Icons.map), onPressed: navigateToMap),
       ],
@@ -57,7 +50,21 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
       emptyListWidget: Center(
         child: Text("Click the add button to create your first task"),
       ),
+      customItemBuilder: customItemBuilder,
     );
+  }
+
+  void navigateToMap() {
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+      return DocumentListMapView(documentList);
+    }));
+  }
+
+  Color getCardColor(Document doc) {
+    int priority = doc["pri count"];
+    if (priority < 3) return Colors.red;
+    if (priority < 6) return Colors.yellow;
+    return Colors.green;
   }
 
   Widget customItemBuilder(int index, Document doc, BuildContext context) {
@@ -75,22 +82,18 @@ class _TaskerHomePageState extends State<TaskerHomePage> {
             doc["date"],
             style: textTheme.headline,
           ),
-          TypedDisplayField(fieldName: "latlong", document: doc, boxSize: 200.00,),
           Text(
             doc["subtitle"],
             style: textTheme.subhead,
           ),
-          DocumentActionsButton(documentList, index: index)
+          TypedDisplayField(
+            fieldName: "latlong",
+            document: doc,
+            boxSize: 200.00,
+          ),
+          DocumentActionsButton(documentList, index: index),
         ],
       ),
     );
   }
-
-  Color getCardColor(Document doc) {
-    int priority = doc["pri count"];
-    if (priority < 3) return Colors.red;
-    if (priority < 6) return Colors.yellow;
-    return Colors.green;
-  }
 }
-```
