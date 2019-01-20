@@ -39,9 +39,12 @@ Like "date" and "count", "latlong" has semantic meaning in Rapido. It means that
 After closing the app, and restarting it, if we go through the UI and choose the edit button for a task, you will see that a new field is exposed, named "Map Location." The field is a map that the user can drag around. The flag in the center of the map represents the location that the user would like to choose. By Default, the map starts at the user's current location.
 ![location picker](../assets/location-picker.png)
 
-After adding a location to each item, though, the user can't see the location yet.
+The default ListTile will show the location on a tiny map:  
+![dedfault map](../assets/list-tile-maps.png)
 
-To start, we can add a small version of the map to the custom cards. This is greatly simplified using Rapido's [TypedDisplayField]((https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
+So there is some default functionality to make sue of the locations after adding a location to each item. But this doesn't help us much in our custom widgets. We should show the map location on our Cards.
+
+This is greatly simplified using Rapido's [TypedDisplayField]((https://pub.dartlang.org/documentation/rapido/latest/rapido/TypedDisplayField-html) functionality. Essentially, you pass in any field for a document along with a desired size, and Rapido will convert that into a display widget. Simply slip this line into your custom card:
 ```
           TypedDisplayField(fieldName: "latlong", document: doc, boxSize: 200.00,),
 ```
