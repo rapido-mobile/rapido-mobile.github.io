@@ -69,7 +69,7 @@ You can return any widget that you want from customItemBuilder. For this tutoria
         children: <Widget>[
           Text(doc["title"]),
           Text(doc["date"]),
-          Text(doc["note"])
+          Text(doc["subtitle"])
         ],
       ),
     );
@@ -95,7 +95,7 @@ We can use the applications text them to enhance the display some:
             style: textTheme.headline,
           ),
           Text(
-            doc["note"],
+            doc["subtitle"],
             style: textTheme.subhead,
           )
         ],
@@ -154,7 +154,7 @@ The full function now looks like this:
             style: textTheme.headline,
           ),
           Text(
-            doc["note"],
+            doc["subtitle"],
             style: textTheme.subhead,
           ),
           DocumentActionsButton(documentList, index: index)
@@ -165,6 +165,75 @@ The full function now looks like this:
 ```
 And it "just works":  
 ![with actions](../assets/custom-builder-5.png)
+
+## Styling the Form
+While it's nice that the main part of the app is styled, the form is still very boring looking:  
+![create](../assets/create.png)
+
+Rapido provides some convenience functions to allow you to quickly brand the The [DocumentForm](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentForm-class.html)
+### Background Decoration
+We can pass in a decoration that gets applied to the forms as they are created. Again, any kind of BoxDecoration is supported. In this case, we will use the application's background color, and set the BoxDecoration to the [DocumentListScaffold](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentListScaffold-class.html)'s formDecoration property. Notice the one extra line:  
+
+```dart
+  Widget build(BuildContext context) {
+    return DocumentListScaffold(
+      documentList,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/background.jpg"),
+          colorFilter: ColorFilter.mode(
+              Colors.white.withOpacity(0.05), BlendMode.dstATop),
+        ),
+      ),
+      formDecoration: BoxDecoration(color: Theme.of(context).colorScheme.background),
+      emptyListWidget: Center(
+        child: Text("Click the add button to create your first task"),
+      ),
+      customItemBuilder: customItemBuilder,
+    );
+  }
+```
+
+Now the form will pick up that decoration:  
+![decorated form](../assets/form-decoration.png)
+
+### Form Fields
+We can take the customization one small step forward, and supply a decoration that will get applied to each field in the form.
+
+The code below supplies a new BoxDecoration to the formFieldDecoration property:
+
+```dart
+  @override
+  Widget build(BuildContext context) {
+    return DocumentListScaffold(
+      documentList,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/background.jpg"),
+          colorFilter: ColorFilter.mode(
+              Colors.white.withOpacity(0.05), BlendMode.dstATop),
+        ),
+      ),
+      formDecoration:
+          BoxDecoration(color: Theme.of(context).colorScheme.background),
+      formFieldDecoration: BoxDecoration(
+        border: Border.all(color: Theme.of(context).primaryColor),
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
+      ),
+      emptyListWidget: Center(
+        child: Text("Click the add button to create your first task"),
+      ),
+      customItemBuilder: customItemBuilder,
+    );
+  }
+```
+
+This adds a rounded border to each field.  
+![form field decoration](../assets/decorated-fields.png)
+
+I'm the first to admit that the look of the form is not very pleasing. I'm sure that you can come up with much nicer branding.
 
 # Summary
 In this section, we dove into how to create custom widgets. In the [next section](flutter_maps_and_location.md), we will show how to include location and mapping functionality.
