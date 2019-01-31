@@ -17,7 +17,8 @@ This section is an overview of all of the supported input and display types in R
 When you define a field in a Document or DocumentList, Rapido infers a lot from the way the you name the field. It looks at the end of the field name, and guesses what type is desired from that name. 
 
 ## Summary
-All the available inferred types are summarized in the table below.
+All the available inferred types are summarized in the table below.  
+
 | Field Name Ends In  | Inferred Dart Type | Default Input Type | Display Type | Field Options |
 | ------------- | ------------- | ------------- | ------------- | | ------------- |
 | amount | double | TextInput with numbered keyboard | Text | AmountFieldOptions |
