@@ -3,10 +3,11 @@
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complete app with a few lines of code](./flutter_app_in_few_lines.md)
  * [2: Brand and light customization](./customize_flutter_app.md)
- * [3: Providing your own widgets](./custom_flutter_widgets.md)
- * [4: Adding maps and location](./flutter_maps_and_location.md)
- * [5: Adding images](./flutter_images.md)
- * 6: Document and DocumentList
+ * [3: Input and Display Types](./rapido_input_types.md)
+ * [4: Providing your own widgets](./custom_flutter_widgets.md)
+ * [5: Adding maps and location](./flutter_maps_and_location.md)
+ * [6: Adding images](./flutter_images.md)
+ * 7: Document and DocumentList
  * [Full Code Example](./main.md)
 
 In this part of the tutorial, we will take a look at using [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html). So far in the example application in the tutorial, the user has been creating, editing, and deleting Documents with the UI that is automatically provided by Rapido for that purpose. In this part of the tutorial, we will be working with JSON we receive from a web service. 

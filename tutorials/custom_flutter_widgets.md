@@ -3,13 +3,12 @@
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complete app with a few lines of code](./flutter_app_in_few_lines.md)
  * [2: Brand and light customization](./customize_flutter_app.md)
- * 3: Providing your own widgets
- * [4: Adding maps and location](./flutter_maps_and_location.md)
- * [5: Adding images](./flutter_images.md)
- * [6: Document and DocumentList](./rapido_documents.md)
+ * [3: Input and Display Types](./rapido_input_types.md)
+ * 4: Providing your own widgets
+ * [5: Adding maps and location](./flutter_maps_and_location.md)
+ * [6: Adding images](./flutter_images.md)
+ * [7: Document and DocumentList](./rapido_documents.md)
  * [Full Code Example](./main.md)
-
-This is part 3 of the getting started with Rapido tutorial. If you haven't looked through [part 1](flutter_app_in_few_lines.md) and [part 2](customize_flutter_app.md) you might want to at least go back and skim those so this part makes sense.
 
 ## Starting Point
 At this point, we have a functioning application, and we have applied some branding:  

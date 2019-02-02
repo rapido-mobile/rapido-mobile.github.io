@@ -3,15 +3,12 @@
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complete app with a few lines of code](./flutter_app_in_few_lines.md)
  * [2: Brand and light customization](./customize_flutter_app.md)
- * [3: Providing your own widgets](./custom_flutter_widgets.md)
- * 4: Adding maps and location
- * [5: Adding images](./flutter_images.md)
- * [6: Document and DocumentList](./rapido_documents.md)
+ * [3: Input and Display Types](./rapido_input_types.md)
+ * [4: Providing your own widgets](./custom_flutter_widgets.md)
+ * 5: Adding maps and location
+ * [6: Adding images](./flutter_images.md)
+ * [7: Document and DocumentList](./rapido_documents.md)
  * [Full Code Example](./main.md)
-
-This is part 4 of the getting started with Rapido tutorial. If you haven't looked through the previous parts, you might want to at least go back and skim those so this part makes sense.
-
-In this section we will add a map location to each task, and display a map with each entry.
 
 ## Starting Point
 At this point we have a fully functional task application that has some of our branding and we've supplied some custom widgets for the individual task items. 

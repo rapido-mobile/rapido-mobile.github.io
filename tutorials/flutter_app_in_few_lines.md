@@ -3,10 +3,11 @@
  * [Introduction to Rapido](./introduction.md)
  * 1: Make a complete app with a few lines of code
  * [2: Brand and light customization](./customize_flutter_app.md)
- * [3: Providing your own widgets](./custom_flutter_widgets.md)
- * [4: Adding maps and location](./flutter_maps_and_location.md)
- * [5: Adding images](./flutter_images.md)
- * [6: Document and DocumentList](./rapido_documents.md)
+ * [3: Input and Display Types](./rapido_input_types.md)
+ * [4: Providing your own widgets](./custom_flutter_widgets.md)
+ * [5: Adding maps and location](./flutter_maps_and_location.md)
+ * [6: Adding images](./flutter_images.md)
+ * [7: Document and DocumentList](./rapido_documents.md)
  * [Full Code Example](./main.md)
 
 Maybe you read the [introduction to Rapido](introduction.md), or maybe you didn't. Either ways is fine, in this part we start coding.

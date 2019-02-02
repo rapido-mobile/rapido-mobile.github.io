@@ -4,15 +4,12 @@
  * [Introduction to Rapido](./introduction.md)
  * [1: Make a complete app with a few lines of code](./flutter_app_in_few_lines.md)
  * [2: Brand and light customization](./customize_flutter_app.md)
- * [3: Providing your own widgets](./custom_flutter_widgets.md)
- * [4: Adding maps and location](./flutter_maps_and_location.md)
- * 5: Add images
- * [6: Document and DocumentList](./rapido_documents.md)
+ * [3: Input and Display Types](./rapido_input_types.md)
+ * [4: Providing your own widgets](./custom_flutter_widgets.md)
+ * [5: Adding maps and location](./flutter_maps_and_location.md)
+ * 6: Add images
+ * [7: Document and DocumentList](./rapido_documents.md)
  * [Full Code Example](./main.md)
-
-This is part 5 of the getting started with Rapido tutorial. If you haven't looked through the previous parts, you might want to at least go back and skim those so this part makes sense.
-
-In this section we will add an image to each task.
 
 ## Starting Point
 We're going to rewind a bit, back to [ Part 2: Brand and light customization](./customize_flutter_app.md) and then go ahead and add images instead of location to each item. Using location and images together is absolutely fine and works perfectly well, but it'll keep the tutorial a little more simple if we don't mix them.
