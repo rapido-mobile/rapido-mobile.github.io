@@ -29,6 +29,7 @@ All the available inferred types are summarized in the table below.
 | image | String | Image picker, on device and URLs supported | Image | none |
 | latlong | Map<String, double> | Map picker | Map | none |
 | text | String | Multi-line input | String | none |
+| | String | Any other value is assumed to be a String | String | |
 
 ## Defining Your Fields
 There are two ways to tell your DocumentList what fields the Documents it contain will have, explicitly and implicitly.
@@ -99,4 +100,60 @@ Now the DocumentListScaffold uses the field names to create an appropriate Docum
 [input form](../assets/typed-form-3.png) 
 
 ## Field Options
+Rapido makes good use of inferences to quickly create a UI for basic CRUD operations with very little coding. However, there may be cases where you would like to give Rapido "hints" so it can create a more tailored UI. Rapido uses FieldOptions for this. The full list of supported FieldOptions is available in the table above.
 
+### Setting FieldOptions
+Field options are set via the FieldOptionsMap property of a DocumentList or DocumentListScaffold. This will be clear in the examples below.
+
+### IntegerPickerFieldOptions
+IntegerPickerFieldOptions allows you to set a minimum and maximum. When both of these are set, Rapido will provide a spinner picker instead of a text input field:  
+```dart
+    final DocumentList documentList = DocumentList(
+    "tasker",
+        labels: {
+            "Intenger Number": "count",
+        },
+        fieldOptionsMap: {"count":IntegerPickerFieldOptions(1, 10)}
+    );
+```
+
+[input form](../assets/integer-picker.png) 
+
+### InputListFieldOptions 
+If you want the user to choose from a list of strings, you can achieve this by using the InputListFieldOptions for a field. This takes three inputs, a document type string for an existing DocumentList that holds the values you want to display in the list, a field name from that DocumentList for the value to display, and a field name for the value that you actually want to save. 
+
+```dart
+class TaskerHomePage extends StatefulWidget {
+  TaskerHomePage({Key key}) : super(key: key);
+  final DocumentList inputList = DocumentList(
+    "task types",
+    initialDocuments: [
+      Document(initialValues: {"name": "Shopping"}),
+      Document(initialValues: {"name": "House Work"}),
+      Document(initialValues: {"name": "Errands"}),
+      Document(initialValues: {"name": "School"}),
+    ],
+  );
+
+    final DocumentList documentList = DocumentList(
+    "tasker",
+        labels: {
+            "Task Type": "type",
+        },
+        fieldOptionsMap: {"type":InputListFieldOptions("task types", "name", "name")}
+    );
+```
+
+This results in a list that the user can spin through and make a choice:  
+[input form](../assets/integer-picker.png) 
+
+You can supply up to one FieldOption per field:  
+```dart
+  final DocumentList documentList = DocumentList("tasker", labels: {
+    "Intenger Number": "count",
+    "Type": "type"
+  }, fieldOptionsMap: {
+    "count": IntegerPickerFieldOptions(1, 10),
+    "type": InputListFieldOptions("task type", "name", "name")
+  });
+```
