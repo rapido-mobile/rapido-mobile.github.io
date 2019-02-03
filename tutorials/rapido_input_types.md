@@ -141,7 +141,7 @@ class TaskerHomePage extends StatefulWidget {
 ```
 
 This results in a list that the user can spin through and make a choice:  
-![input form](../assets/integer-picker.png) 
+![input form](../assets/list-picker.png) 
 
 You can supply up to one FieldOption per field:  
 ```dart
