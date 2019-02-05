@@ -187,7 +187,7 @@ To get a flutter package into your project, you add it to your pubspec.yaml file
 dependencies:
   flutter:
     sdk: flutter
-  rapido: ^0.1.0
+  rapido: ^0.1.6
 ```
 
 Again, the indentation levels are very important. If the rapido package on pub.dartlang.org is at a different version than is documented here, use the version on pub.dartlang.org.
