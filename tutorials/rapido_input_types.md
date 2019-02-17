@@ -109,35 +109,46 @@ IntegerPickerFieldOptions allows you to set a minimum and maximum. When both of 
         labels: {
             "Intenger Number": "count",
         },
-        fieldOptionsMap: {"count":IntegerPickerFieldOptions(1, 10)}
+        fieldOptionsMap: {"count":IntegerPickerFieldOptions(minimum: 1, maximum: 10)}
     );
 ```
 
 ![input form](../assets/integer-picker.png) 
 
 ### InputListFieldOptions 
-If you want the user to choose from a list of strings, you can achieve this by using the InputListFieldOptions for a field. This takes three inputs, a document type string for an existing DocumentList that holds the values you want to display in the list, a field name from that DocumentList for the value to display, and a field name for the value that you actually want to save. 
+If you want the user to choose from a list of strings, you can achieve this by using the InputListFieldOptions for a field. This takes three inputs, a DocumentList that holds the values you want to display in the list, a field name from that DocumentList for the value to display, and a field name for the value that you actually want to save. 
+
+We'll move the creation of the DocumentLists into the initState method of _TaskerHomePageState. This is because we want to refer to the inputList DocumentList in the main documentList, and this is easier to do in the State.
 
 ```dart
-class TaskerHomePage extends StatefulWidget {
-  TaskerHomePage({Key key}) : super(key: key);
-  final DocumentList inputList = DocumentList(
-    "task types",
-    initialDocuments: [
-      Document(initialValues: {"name": "Shopping"}),
-      Document(initialValues: {"name": "House Work"}),
-      Document(initialValues: {"name": "Errands"}),
-      Document(initialValues: {"name": "School"}),
-    ],
-  );
-
-    final DocumentList documentList = DocumentList(
-    "tasker",
-        labels: {
-            "Task Type": "type",
-        },
-        fieldOptionsMap: {"type":InputListFieldOptions("task types", "name", "name")}
+@override
+  initState() {
+    DocumentList inputList = DocumentList(
+      "task types",
+      initialDocuments: [
+        Document(initialValues: {"name": "Shopping"}),
+        Document(initialValues: {"name": "House Work"}),
+        Document(initialValues: {"name": "Errands"}),
+        Document(initialValues: {"name": "School"}),
+      ],
     );
+
+    documentList = DocumentList(
+      "tasker",
+      labels: {
+        "Type": "type",
+      },
+      fieldOptionsMap: {
+        "type": InputListFieldOptions(
+          documentList: inputList,
+          displayField: "name",
+          valueField: "name",
+        ),
+      },
+    );
+
+    super.initState();
+  }
 ```
 
 This results in a list that the user can spin through and make a choice:  

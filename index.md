@@ -6,10 +6,11 @@ In general, the tutorial parts are meant to be followed in order. However, the I
  * [Introduction to Rapido](./tutorials/introduction.md)
  * [1: Make a complete app with a few lines of code](./tutorials/flutter_app_in_few_lines.md)
  * [2: Brand and light customization](./tutorials/customize_flutter_app.md)
- * [3: Providing your own widgets](./tutorials/custom_flutter_widgets.md)
- * [4: Adding maps and location](./tutorials/flutter_maps_and_location.md)
- * [5: Adding images](./tutorials/flutter_images.md)
- * [6: Document and DocumentList](./tutorials/rapido_documents.md)
+ * [3: Input and Display Types](./tutorials/rapido_input_types.md)
+ * [4: Providing your own widgets](./tutorials/custom_flutter_widgets.md)
+ * [5: Adding maps and location](./tutorials/flutter_maps_and_location.md)
+ * [6: Adding images](./tutorials/flutter_images.md)
+ * [7: Document and DocumentList](./tutorials/rapido_documents.md)
 
 ## Links
  * [API Documentation](https://pub.dartlang.org/documentation/rapido/latest/)
