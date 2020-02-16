@@ -8,6 +8,7 @@
  * [5: Adding maps and location](./flutter_maps_and_location.md)
  * [6: Adding images](./flutter_images.md)
  * [7: Document and DocumentList](./rapido_documents.md)
+ * [8: Storing Secrets](./secrets_persistence.md)
  * [Full Code Example](./main.md)
 
 ## Starting Point

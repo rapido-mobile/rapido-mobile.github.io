@@ -8,6 +8,7 @@
  * [5: Adding maps and location](./flutter_maps_and_location.md)
  * [6: Adding images](./flutter_images.md)
  * 7: Document and DocumentList
+ * [8: Storing Secrets](./secrets_persistence.md)
  * [Full Code Example](./main.md)
 
 In this part of the tutorial, we will take a look at using [Document](https://pub.dartlang.org/documentation/rapido/latest/rapido/Document-class.html) and [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html). So far in the example application in the tutorial, the user has been creating, editing, and deleting Documents with the UI that is automatically provided by Rapido for that purpose. In this part of the tutorial, we will be working with JSON we receive from a web service. 
