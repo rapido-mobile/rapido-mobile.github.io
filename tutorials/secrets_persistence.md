@@ -59,7 +59,7 @@ This produces the following blank application:
 ![blank app](../assets/secrets01.png)
 
 ### Add a DocumentList for the User Data
-In the next step, we add a new [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) for the user data. Because of the async nature of Flutter, it is easiest to declare the DocumentLlist normally, but to actually instantiate it inside the initState function so that we can retrigger the build function when the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) is done loading.
+In the next step, we add a new [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) for the user data. Because of the async nature of Flutter, it is easiest to declare the DocumentList normally, but to actually instantiate it inside the initState function so that we can retrigger the build function when the [DocumentList](https://pub.dartlang.org/documentation/rapido/latest/rapido/DocumentList-class.html) is done loading.
 
 Note the following important concepts below:
  * userList is created with a [SecretsPersistence](https://pub.dev/documentation/rapido/latest/rapido/SecretsPercistence-class.html) PersistenceProvider instead of using the default. This tells Rapido to use the device's secrets store. This is all that you need to do in order to store the contents securely.
@@ -149,7 +149,7 @@ Obviously, since the onPressed function is null, nothing will happen. So, let's 
 
 If you create a [DocumentForm](https://pub.dev/documentation/rapido/latest/rapido/DocumentForm-class.html) without a document property set or with document set to null, the [DocumentForm](https://pub.dev/documentation/rapido/latest/rapido/DocumentForm-class.html) will create a new [Document](https://pub.dev/documentation/rapido/latest/rapido/Document-class.html), and add it to the DocumentList. If you include a [Document](https://pub.dev/documentation/rapido/latest/rapido/Document-class.html), then the form will edit that document instead.
 
-Again, the ternary operator makes this easy. You can read the code below as "if userList.length equaly zero, then the document is null, else, the document is the first index in userList."
+Again, the ternary operator makes this easy. You can read the code below as "if userList.length equal zero, then the document is null, else, the document is the first index in userList."
 
 ```dart
 document: userList.length == 0 ? null : userList[0],
@@ -231,7 +231,7 @@ In order to support multiple accounts, simply change the onPressed function to r
 ```
 
 Now when the user clicks the button, they get a list of their accounts:
-![account list](../assets/secrets06.png)
+![account list](../assets/secrets07.png)
 
 Notice that the token field is hidden. That's because Rapido knows not to display a field ending in "secret."
 
