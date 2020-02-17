@@ -11,7 +11,7 @@ In general, the tutorial parts are meant to be followed in order. However, the I
  * [5: Adding maps and location](./tutorials/flutter_maps_and_location.md)
  * [6: Adding images](./tutorials/flutter_images.md)
  * [7: Document and DocumentList](./tutorials/rapido_documents.md)
- * [8: Storing Secrets](./tutoirals/secrets_persistence.md)
+ * [8: Storing Secrets](./tutorials/secrets_persistence.md)
 
 ## Links
  * [API Documentation](https://pub.dartlang.org/documentation/rapido/latest/)
